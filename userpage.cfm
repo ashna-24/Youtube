@@ -3,14 +3,47 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/youtube.css">
+        <link rel="stylesheet" href="css/youtube.css"> 
         <link rel="icon" href="assets/youtubeicon.png">
-        <title>YouTube</title> 
+        <title>YouTube</title>
     </head>
     <body>
         <cfoutput>
-            <cfinclude  template="header.cfm">
-            <div class="mainbody flex">
+        <div class="header flex">
+            <div class="headerLeft flex">
+                <div class="menu pointer">
+                    <img src="assets/menu.png" alt="Not found" class="menuicon">
+                </div>
+                <div class="logo flex pointer">
+                    <img src="assets/youtubelogo.png" alt="Not found" class="ytblogo">
+                    <span class="ytbin">IN</span>
+                </div>
+            </div>
+            <div class="headerMiddle flex">
+                <div class="search flex">
+                    <div class="searchinput">
+                        <input type="search" name="search" id="search" class="ytbsearch" placeholder="Search">
+                    </div>
+                    <div class="searchicon pointer">
+                        <img src="assets/search.png" alt="Not found" class="ytb">
+                    </div>
+                </div>
+                <div class="voice pointer">
+                    <img src="assets/mic.png" alt="Not found" class="mic width">
+                </div>
+            </div>
+            <div class="headerRight flex">
+                <div class="account pointer">
+                    <img src="assets/more.png" alt="Not found" class="width">
+                </div>
+                <div class="right rightalign flex pointer">
+                    <img src="assets/profile.png" alt="Not found" class="width sign">
+                    <span class="signin">Sign in</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainbody flex">
                 <div class="sidebar">
                     <div class="set">
                         <div class="home selected flex padding pointer">
@@ -31,26 +64,12 @@
                             <img src="assets/history.png" alt="Not found" class="width">
                             <span class="text">History</span>
                         </div>
-                        <a href="adminpage.cfm" target="_blank" class="link">
-                            <div class="home watch flex padding pointer">
-                                <img src="assets/slideshow.png" alt="Not found" class="width">
-                                <span class="text">Your videos</span>
-                            </div>
-                        </a>
-                        <div class="home watch flex padding pointer">
-                            <img src="assets/watchlater.png" alt="Not found" class="width">
-                            <span class="text">Watch later</span>
-                        </div>
-                        <div class="home like flex padding pointer">
-                            <img src="assets/like.png" alt="Not found" class="width">
-                            <span class="text">Liked videos</span>
-                        </div>
                     </div>
                     <div class="set">
-                        <span class="title">Subscriptions</span>
-                        <div class="home flex padding pointer">
-                            <img src="" alt="Not found" class="width">
-                            <span class="text"></span>
+                        <p class="text align">Sign in to like videos,<br>comment, and subscribe.</p>
+                        <div class="right flex side">
+                            <img src="assets/profile.png" alt="Not found" class="width sign">
+                            <span class="signin">Sign in</span>
                         </div>
                     </div>
                     <div class="set">
@@ -70,6 +89,12 @@
                         <div class="home flex padding pointer">
                             <img src="assets/gamingpage.jpg" alt="Not found" class="width sub">
                             <span class="text">Gaming</span>
+                        </div>
+                    </div>
+                    <div class="set">
+                        <div class="home flex padding pointer">
+                            <img src="assets/add.png" alt="Not found" class="width">
+                            <span class="text">Browse channels</span>
                         </div>
                     </div>
                     <div class="set">
