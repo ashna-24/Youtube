@@ -7,7 +7,7 @@
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title>
     </head>
-    <body>
+    <body class="body">
         <div class="header flex">
             <div class="headerLeft flex">
                 <div class="menu">

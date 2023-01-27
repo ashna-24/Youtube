@@ -3,8 +3,12 @@
     padding: 0;
 }
 
-body{
+.body{
     font-family: "Roboto","Arial",sans-serif;
+}
+
+.bodycontent{
+    font-family: "YouTube Sans","Roboto","Arial",sans-serif;
 }
 
 .flex{
@@ -216,15 +220,15 @@ body{
 }
 
 .signin{
-    color: rgb(1, 105, 194);
+    color: rgb(8, 112, 247);
     font-size: 14px;
     padding-top: 3px;
 }
 
 .rightcreate{
     border: 1px solid rgb(242, 242, 242);
-    padding: 5px 10px;
-    width: 85px;
+    padding: 0px 10px;
+    width: 100px;
     margin-right: 15px;
 }
 
@@ -240,7 +244,7 @@ body{
 
 .msg{
     font-size: 13px;
-    padding: 3px 0px 0px 7px;
+    margin: 10px 9px;
 }
 
 .ytbadmin{
@@ -271,12 +275,12 @@ body{
 }
 
 .spanletter{
-    width: 64px;
+    width: 117px;
     border: none;
-    border-radius: 61px;
-    font-size: 55px;
+    border-radius: 60px;
+    font-size: 56px;
     color: white;
-    padding: 25px;
+    padding: 17px 26px;
     background-color: rgb(191,54,12);
 }
 
@@ -284,6 +288,10 @@ body{
     font-size: 13px;
     padding: 15px 0px 10px 15px;
     font-weight: bold;
+}
+
+.createwidth{
+    padding: 8px 0px;
 }
 
 .username{
@@ -314,7 +322,7 @@ body{
 }
 
 .comments{
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .textcont{
@@ -325,5 +333,191 @@ body{
 }
 
 .contcomments{
-    padding-left: 15px;
+    margin-left: 15px;
+}
+
+.headertext{
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.textcontent{
+    padding: 20px 0px 0px 30px;
+    width: 1055px;
+    border-bottom: 1px solid rgb(231,231,231);
+}
+
+.font{
+    font-size: 13px;
+}
+
+.color{
+    color: dimgray;
+}
+
+.bold{
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.videos{
+    font-size: 14px;
+    font-weight: bold;
+    color:rgb(1, 105, 194);
+    padding: 10px 0px 13px 0px;
+    border-bottom: 3px solid rgb(8, 112, 247);
+    width: 47px;
+}
+
+.filterset{
+    padding: 15px 0px 10px 30px;
+    border-bottom: 1px solid rgb(231,231,231);
+}
+
+input:focus{
+    outline: none;
+}
+
+.filter{
+    border: transparent;
+    padding-top: 3px;
+    font-size: 15px;
+}
+
+.setimg{
+    width: 51px;
+    padding-right: 25px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.video{
+    width: 1090px;
+}
+
+tr.conttr{
+    border-bottom: 1px solid rgb(231,231,231);
+}
+
+.tablepadding{
+    padding: 10px 0px;
+}
+
+.checkbox{
+    column-width: 460px;
+    border-right: 1px solid rgb(231,231,231);
+}
+
+.check{
+    margin: 0px 20px 0px 30px;
+}
+
+.listtd{
+    column-width: 130px;
+}
+
+.nocontent{
+    margin: 45px 0px 50px 470px;
+}
+
+.notavailable{
+    font-size: 15px;
+    padding: 10px 0px 0px 35px;
+    color: dimgray;
+}
+
+.upload{
+    padding: 10px 0px 10px 33px;
+}
+
+.uploadfile{
+    padding: 8px 13px;
+    background-color:rgb(8, 112, 247);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    border: transparent;
+}
+
+.modalhead{
+    position: relative;
+    padding: 15px 5px;
+    border-bottom: 1px solid rgb(231,231,231);
+}
+
+.closemodal{
+    position: absolute;
+    right: 30px;
+}
+
+.uploadvideos{
+    font-weight: bold;
+    font-size: 19px;
+    padding-left: 20px;
+}
+
+.feedback{
+    margin-right: 20px;
+    padding-top: 4px;
+}
+
+.close{
+    font-size: 20px;
+}
+
+.closetitle{
+    text-decoration: none;
+}
+
+.uploadimage{
+    width: 135px;
+    margin: 100px 0px 30px 380px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 75px;
+}
+
+.uploadimage img{
+    padding: 36px 32px 35px 37px;
+}
+
+.dragordrop{
+    text-align: center;
+}
+
+.drag{
+    font-size: 14px;
+}
+
+.private{
+    font-size: 13px;
+    color:rgb(144, 144, 144);
+}
+
+.selectfile{
+    text-align: center;
+}
+
+.videofile{
+    padding: 8px 15px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 2px;
+    background-color:rgb(8, 112, 247);
+    font-size: 13px;
+}
+
+.uploadbottom{
+    text-align: center;
+    color: rgb(144, 144, 144);
+    font-size: 12px;
+    margin-top: 80px;
+    padding-bottom: 30px;
+    line-height: 2;
+}
+
+.blue{
+    color: rgb(8, 112, 247);
 }

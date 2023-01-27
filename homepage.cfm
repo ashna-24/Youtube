@@ -7,7 +7,7 @@
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title> 
     </head>
-    <body>
+    <body class="body">
         <cfoutput>
             <cfinclude  template="header.cfm">
             <div class="mainbody flex">
