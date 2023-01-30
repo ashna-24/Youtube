@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/youtube.css">
+        <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title> 
     </head>
@@ -79,19 +79,11 @@
                             <span class="text">YouTube Premium</span>
                         </div>
                         <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
-                            <span class="text">Creator Studio</span>
-                        </div>
-                        <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
+                            <img src="assets/youtubemusic.png" alt="Not found" class="width">
                             <span class="text">YouTube Music</span>
                         </div>
                         <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
-                            <span class="text">YouTube Kids</span>
-                        </div>
-                        <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
+                            <img src="assets/youtubetv.png" alt="Not found" class="width">
                             <span class="text">YouTube TV</span>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/youtube.css"> 
+        <link rel="stylesheet" href="css/youtubeapp.css"> 
         <link rel="icon" href="assets/youtubeicon.png">
         <title>Channel content-YouTube Studio</title>
     </head>
@@ -21,22 +21,22 @@
                 </div>
                 <div class="dataupload">
                     <div class="uploadimage pointer">
-                        <img src="assets/uploadimage.png" alt="Not found" onclick="document.getElementById('videofile').click()">
+                        <img src="assets/uploadimage.png" alt="Not found" onclick="document.getElementById('fileupload').click()">
                     </div>
                     <div class="dragordrop">
                         <p class="drag">Drag and drop files to upload</p>
                         <p class="private">Your videos will be private until you publish them.</p>
                     </div>
-                    <input type="file" name="videofile" id="videofile" style="visibility:hidden;">
-                    <div class="selectfile">
-                        <button type="submit" class="videofile pointer" onclick="document.getElementById('videofile').click()">
-                            SELECT FILES
-                        </button>
-                    </div>
+                    <form method="post" enctype="multipart/form-data">
+                        <input type="file" id="fileupload" name="fileupload" style="visibility:hidden;">
+                        <div class="selectfile">
+                            <input type="button" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer" onclick="document.getElementById('fileupload').click()">
+                        </div>
+                    </form>
+                    <cfif structKeyExists(form, 'videofile')>
+                        <cfinvoke method="getupload" component="components/uploadfile">
+                    </cfif>
                 </div>
-                <cfif structKeyExists(form, 'videofile')>
-                    <cfinvoke method="getupload" component="components/uploadfile">
-                </cfif>
                 <div class="uploadbottom">
                     <p>
                         By submitting your videos to YouTube, you acknowledge that you agree to YouTube's <span class="blue pointer">Terms of Service</span> and <span class="blue pointer">Community Guidelines</span>.<br>

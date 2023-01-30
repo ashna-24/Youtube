@@ -3,7 +3,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/youtube.css"> 
+        <link rel="stylesheet" href="css/youtubeapp.css"> 
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title>
     </head>
@@ -36,9 +36,14 @@
                 <div class="account pointer">
                     <img src="assets/more.png" alt="Not found" class="width">
                 </div>
-                <div class="right rightalign flex pointer">
-                    <img src="assets/profile.png" alt="Not found" class="width sign">
-                    <span class="signin">Sign in</span>
+                <a onclick="document.getElementById('signin').style.display='block'" class="closetitle pointer">
+                    <div class="right rightalign flex">
+                        <img src="assets/profile.png" alt="Not found" class="width sign">
+                        <span class="signin">Sign in</span>
+                    </div>
+                </a>
+                <div id="signin" class="w3-modal">
+                    <cfinclude template="login.cfm">
                 </div>
             </div>
         </div>
@@ -67,10 +72,12 @@
                     </div>
                     <div class="set">
                         <p class="text align">Sign in to like videos,<br>comment, and subscribe.</p>
-                        <div class="right flex side">
-                            <img src="assets/profile.png" alt="Not found" class="width sign">
-                            <span class="signin">Sign in</span>
-                        </div>
+                        <a onclick="document.getElementById('signin').style.display='block'" class="closetitle pointer">
+                            <div class="right flex side">
+                                <img src="assets/profile.png" alt="Not found" class="width sign">
+                                <span class="signin">Sign in</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="set">
                         <span class="title">Explore</span>
@@ -104,19 +111,11 @@
                             <span class="text">YouTube Premium</span>
                         </div>
                         <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
-                            <span class="text">Creator Studio</span>
-                        </div>
-                        <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
+                            <img src="assets/youtubemusic.png" alt="Not found" class="width">
                             <span class="text">YouTube Music</span>
                         </div>
                         <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
-                            <span class="text">YouTube Kids</span>
-                        </div>
-                        <div class="home flex padding pointer">
-                            <img src="assets/" alt="Not found" class="width">
+                            <img src="assets/youtubetv.png" alt="Not found" class="width">
                             <span class="text">YouTube TV</span>
                         </div>
                     </div>
