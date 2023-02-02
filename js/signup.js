@@ -32,7 +32,7 @@ function successValidate(id){
 function fullnamevalidate(fullname){
     if(fullname.value==""){
         errorValidate('fullname_error');
-        username.style.border="1px solid red"; 
+        fullname.style.borderBottom="1px solid red"; 
         return false;
     }
     else{
@@ -49,7 +49,7 @@ function emailvalidate(email){
     }
     else{
         errorValidate('email_error');
-        email.style.border="1px solid red";
+        email.style.borderBottom="1px solid red";
         return false;
     }
 }
@@ -62,7 +62,7 @@ function numbervalidate(number){
     }
     else{
         errorValidate('number_error');
-        number.style.border="1px solid red";
+        number.style.borderBottom="1px solid red";
         return false;
     }
 }
@@ -70,7 +70,7 @@ function numbervalidate(number){
 function usernamevalidate(username){
     if(username.value==""){
         errorValidate('username_error');
-        username.style.border="1px solid red";
+        username.style.borderBottom="1px solid red";
         return false;
     }
     else{
@@ -87,7 +87,7 @@ function pswdvalidate(pswd){
     }
     else{
         errorValidate('pswd_error');
-        pswd.style.border="1px solid red";
+        pswd.style.borderBottom="1px solid red";
         return false;
     }
 }
@@ -100,7 +100,7 @@ function conpswdvalidate(conpswd){
     }
     else if(conpswd.value != pswd.value){
         errorValidate('conform_error');
-        conpswd.style.border="1px solid red";
+        conpswd.style.borderBottom="1px solid red";
         return false;
     }
     else{
