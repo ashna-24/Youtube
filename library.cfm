@@ -25,7 +25,7 @@
                         </div>
                         <div class="set">
                             <div class="home library selected flex padding pointer">
-                                <img src="assets/videolibrary.png" alt="Not found" class="width">
+                                <img src="assets/library.png" alt="Not found" class="width">
                                 <span class="text">Library</span>
                             </div>
                             <div class="home history flex padding pointer">

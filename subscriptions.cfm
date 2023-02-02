@@ -18,22 +18,22 @@
                                 <img src="assets/home.png" alt="Not found" class="width">
                                 <span class="text">Home</span>
                             </div>
-                            <div class="home subscriptions flex padding pointer">
-                                <img src="assets/subscriptions.png" alt="Not found" class="width">
+                            <div class="home subscriptions selected flex padding pointer">
+                                <img src="assets/videoplay.png" alt="Not found" class="width">
                                 <span class="text">Subscriptions</span>
                             </div>
                         </div>
                         <div class="set">
                             <div class="home library flex padding pointer">
-                                <img src="assets/videolibrary.png" alt="Not found" class="width">
+                                <img src="assets/library.png" alt="Not found" class="width">
                                 <span class="text">Library</span>
                             </div>
                             <div class="home history flex padding pointer">
                                 <img src="assets/history.png" alt="Not found" class="width">
                                 <span class="text">History</span>
                             </div>
-                            <div class="home watch selected flex padding pointer">
-                                <img src="assets/clock.png" alt="Not found" class="width">
+                            <div class="home watch flex padding pointer">
+                                <img src="assets/watchlater.png" alt="Not found" class="width">
                                 <span class="text">Watch later</span>
                             </div>
                             <div class="home like flex padding pointer">
