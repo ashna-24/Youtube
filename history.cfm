@@ -7,14 +7,14 @@
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title> 
     </head>
-    <body class="body">
+    <body>
         <cfoutput>
             <cfif structKeyExists(session, 'userflag')>
                 <cfinclude  template="header.cfm">
                 <div class="mainbody flex">
                     <div class="sidebar">
                         <div class="set">
-                            <div class="home selected flex padding pointer">
+                            <div class="home flex padding pointer">
                                 <img src="assets/home.png" alt="Not found" class="width">
                                 <span class="text">Home</span>
                             </div>
@@ -28,7 +28,7 @@
                                 <img src="assets/videolibrary.png" alt="Not found" class="width">
                                 <span class="text">Library</span>
                             </div>
-                            <div class="home history flex padding pointer">
+                            <div class="home history selected flex padding pointer">
                                 <img src="assets/history.png" alt="Not found" class="width">
                                 <span class="text">History</span>
                             </div>
@@ -84,21 +84,33 @@
                         </div>
                     </div>
                     <div class="content">
-                        <div class="list flex">
-                            <div class="all pointer">
-                                <span class="size">All</span>
+                        <div class="historycont flex">
+                            <div class="historylist">
+                                Watch history
                             </div>
-                            <div class="all pointer">
-                                <span class="size">Music</span>
-                            </div>
-                            <div class="all pointer">
-                                <span class="size">Sports</span>
-                            </div>
-                            <div class="all pointer">
-                                <span class="size">Trending</span>
-                            </div>
-                            <div class="all pointer">
-                                <span class="size">Gaming</span>
+                            <div class="historyselect">
+                                <span class="typehistory">History Type</span>
+                                <div class="selecttype">
+                                    Watch history<input type="radio" name="radiobtn" id="radiobtn" class="radiobtn" checked>
+                                    Community<input type="radio" name="radio" id="radio" class="radiobtn">
+                                </div>
+                                <div class="clearall">
+                                    <img src="assets/trash.png" alt="Not Found" class="trash">
+                                    <span class="text">Clear all watch history</span>
+                                </div>
+                                <div class="clearall">
+                                    <img src="assets/playbutton.png" alt="Not Found" class="trash">
+                                    <span class="text">Turn on watch history</span>
+                                </div>
+                                <div class="clearall">
+                                    <img src="assets/settings.png" alt="Not Found" class="trash">
+                                    <span class="text">Manage all history</span>
+                                </div>
+                                <div class="clearall">
+                                    <span class="text">Watch and search history</span>
+                                    <span class="text">Comments</span>
+                                    <span class="text">Live chat</span>
+                                </div>
                             </div>
                         </div>
                     </div>

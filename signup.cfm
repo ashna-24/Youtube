@@ -29,6 +29,13 @@
                                 Phone Number<span class="colorred">*</span><br>
                                 <input type="text" name="number" id="number" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="number_error">Please fill this field!!</span><br>
+                                Login Role<span class="colorred">*</span><br>
+                                <select name="role" id="role" class="inputform" onblur="validatesignup()">
+                                    <option></option>
+                                    <option>User</option>
+                                    <option>Admin</option>
+                                </select> 
+                                <span class="error" id="role_error">Please fill this field!!</span><br>
                                 User Name<span class="colorred">*</span><br>
                                 <input type="text" name="username" id="username" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="username_error">Please fill this field!!</span><br>

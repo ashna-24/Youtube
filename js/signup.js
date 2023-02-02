@@ -2,6 +2,7 @@ function validatesignup(){
     var fullname = document.getElementById('fullname');
     var email = document.getElementById('email');
     var phonenumber = document.getElementById('number');
+    var role = document.getElementById('role');
     var username = document.getElementById('username');
     var pswd = document.getElementById('pswd');
     var conpswd = document.getElementById('conpswd');
@@ -9,11 +10,12 @@ function validatesignup(){
     var validatename = fullnamevalidate(fullname);
     var validateemail = emailvalidate(email);
     var validatenumber = numbervalidate(phonenumber);
+    var validaterole = rolevalidate(role);
     var validateusername = usernamevalidate(username);
     var validatepswd = pswdvalidate(pswd);
     var validateconpswd = conpswdvalidate(conpswd);
 
-    if(validatename && validateemail && validatenumber && validateusername && validatepswd && validateconpswd){
+    if(validatename && validateemail && validatenumber && validaterole && validateusername && validatepswd && validateconpswd){
         return true;
     }
     else{
@@ -64,6 +66,18 @@ function numbervalidate(number){
         errorValidate('number_error');
         number.style.borderBottom="1px solid red";
         return false;
+    }
+}
+
+function rolevalidate(role){
+    if(role.value ==""){
+        errorValidate('role_error');
+        role.style.borderBottom="1px solid red";
+        return false;
+    }
+    else{
+        successValidate('role_error');
+        return true;
     }
 }
 

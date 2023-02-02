@@ -13,9 +13,10 @@
                 <div class="menu">
                     <img src="assets/menu.png" alt="Not found" class="menuicon">
                 </div>
-                <div class="logo flex">
+                <div class="logo flex displaytext">
                     <img src="assets/youtubelogo.png" alt="Not found" class="ytblogo">
                     <span class="ytbin">IN</span>
+                    <span class="display">YouTube Home</span>
                 </div>
             </div>
             <div class="headerMiddle flex">
@@ -25,16 +26,20 @@
                     </div>
                     <div class="searchicon">
                         <img src="assets/search.png" alt="Not found" class="ytb">
+                        <span class="display">Search</span>
                     </div>
                 </div>
                 <div class="voice">
                     <img src="assets/mic.png" alt="Not found" class="mic width">
+                    <span class="display">Search with your voice</span>
                 </div>
             </div>
             <div class="headerRight flex">
                 <div class="rightimg flex">
                     <img src="assets/video.png" alt="Not found" class="create width">
+                    <span class="display">Create</span>
                     <img src="assets/notifications.png" alt="Not found" class="notification width">
+                    <span class="display">Notification</span>
                 </div>
                 <div class="account">
                     <span class="letter">A</span>

@@ -9,7 +9,7 @@
     </head>
     <body class="body">
         <cfoutput>
-            <cfif structKeyExists(session, 'userflag')>
+            <cfif structKeyExists(session, 'adminflag')>
                 <cfinclude  template="header.cfm">
                 <div class="mainbody flex">
                     <div class="sidebar">
@@ -32,6 +32,12 @@
                                 <img src="assets/history.png" alt="Not found" class="width">
                                 <span class="text">History</span>
                             </div>
+                            <a href="adminpage.cfm" target="_blank" class="link">
+                                <div class="home watch flex padding pointer">
+                                    <img src="assets/slideshow.png" alt="Not found" class="width">
+                                    <span class="text">Your videos</span>
+                                </div>
+                            </a>
                             <div class="home watch flex padding pointer">
                                 <img src="assets/watchlater.png" alt="Not found" class="width">
                                 <span class="text">Watch later</span>

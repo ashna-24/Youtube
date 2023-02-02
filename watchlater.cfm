@@ -7,14 +7,14 @@
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title> 
     </head>
-    <body class="body">
+    <body>
         <cfoutput>
             <cfif structKeyExists(session, 'userflag')>
                 <cfinclude  template="header.cfm">
                 <div class="mainbody flex">
                     <div class="sidebar">
                         <div class="set">
-                            <div class="home selected flex padding pointer">
+                            <div class="home flex padding pointer">
                                 <img src="assets/home.png" alt="Not found" class="width">
                                 <span class="text">Home</span>
                             </div>
@@ -32,7 +32,7 @@
                                 <img src="assets/history.png" alt="Not found" class="width">
                                 <span class="text">History</span>
                             </div>
-                            <div class="home watch flex padding pointer">
+                            <div class="home watch selected flex padding pointer">
                                 <img src="assets/watchlater.png" alt="Not found" class="width">
                                 <span class="text">Watch later</span>
                             </div>
@@ -84,23 +84,7 @@
                         </div>
                     </div>
                     <div class="content">
-                        <div class="list flex">
-                            <div class="all pointer">
-                                <span class="size">All</span>
-                            </div>
-                            <div class="all pointer">
-                                <span class="size">Music</span>
-                            </div>
-                            <div class="all pointer">
-                                <span class="size">Sports</span>
-                            </div>
-                            <div class="all pointer">
-                                <span class="size">Trending</span>
-                            </div>
-                            <div class="all pointer">
-                                <span class="size">Gaming</span>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </cfif>
