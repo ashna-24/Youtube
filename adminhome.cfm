@@ -80,7 +80,7 @@
                                 <span class="text">YouTube Premium</span>
                             </div>
                             <div class="home flex padding pointer">
-                                <img src="assets/youtubemusic.png" alt="Not found" class="width">
+                                <img src="assets/ytbmusic.svg" alt="Not found" class="width">
                                 <span class="text">YouTube Music</span>
                             </div>
                             <div class="home flex padding pointer">
