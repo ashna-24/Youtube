@@ -293,6 +293,12 @@
     margin-left: 25px;
 }
 
+.contentmodal{
+    border-radius: 30px; 
+    margin-bottom: 30px; 
+    width: 930px;
+}
+
 .list{
     padding: 10px 0px 12px 0px;
     width: 1065px;

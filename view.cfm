@@ -11,6 +11,14 @@
         <cfoutput>
             <cfif structKeyExists(session, 'userflag')>
                 <cfinclude  template="header.cfm">
+                <div class="contview">
+                    <div class="flex">
+                        <div class="viewvideo">
+                        </div>
+                        <div class="viewsidebar">
+                        </div>
+                    </div>
+                </div>
             </cfif>
         </cfoutput>
     </body>
