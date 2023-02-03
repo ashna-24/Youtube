@@ -2,7 +2,7 @@ function validatelogin(){
     var username = document.getElementById('username');
     var password = document.getElementById('pswd');
 
-    var unamevalidate = usernamevalidate(username);
+    var unamevalidate = uservalidate(username);
     var pswdvalidate = passwordvalidate(password);
 
     if(unamevalidate && pswdvalidate){
@@ -21,7 +21,7 @@ function successValidate(id){
     document.getElementById(id).innerHTML="";
 }
 
-function usernamevalidate(username){
+function uservalidate(username){
     if(username.value==""){
         errorValidate('uname_error');
         username.style.border="1px solid red";  

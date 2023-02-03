@@ -39,6 +39,7 @@ function fullnamevalidate(fullname){
     }
     else{
         successValidate('fullname_error');
+        fullname.style.borderBottom="1px solid gainsboro";
         return true;
     }
 }
@@ -47,6 +48,7 @@ function emailvalidate(email){
     var emailmatch = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(email.value.match(emailmatch)){
         successValidate('email_error');
+        email.style.borderBottom="1px solid gainsboro";
         return true;
     }
     else{
@@ -60,6 +62,7 @@ function numbervalidate(number){
     var nummatch = /^\d{10}$/;
     if(number.value.match(nummatch)){
         successValidate('number_error');
+        number.style.borderBottom="1px solid gainsboro";
         return true;
     }
     else{
@@ -77,6 +80,7 @@ function rolevalidate(role){
     }
     else{
         successValidate('role_error');
+        role.style.borderBottom="1px solid gainsboro";
         return true;
     }
 }
@@ -89,6 +93,7 @@ function usernamevalidate(username){
     }
     else{
         successValidate('username_error');
+        username.style.borderBottom="1px solid gainsboro";
         return true;
     }
 }
@@ -97,6 +102,7 @@ function pswdvalidate(pswd){
     var pswdmatch = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
     if(pswd.value.match(pswdmatch)){
         successValidate('pswd_error');
+        pswd.style.borderBottom="1px solid gainsboro";
         return true;
     }
     else{
@@ -107,20 +113,19 @@ function pswdvalidate(pswd){
 }
 
 function conpswdvalidate(conpswd){
-    var pswdmatch = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-    if(conpswd.value.match(pswdmatch)){
-        successValidate('conpswd_error');
-        return true;
+    if(conpswd.value==""){
+        errorValidate('conpswd_error');
+        conpswd.style.border="1px solid red";
+        return false;
     }
-    else if(conpswd.value != pswd.value){
+    else if(conpswd.value!=pswd.value){
         errorValidate('conform_error');
         conpswd.style.borderBottom="1px solid red";
         return false;
     }
     else{
-        errorValidate('conpswd_error');
-        conpswd.style.border="1px solid red";
-        return false;
-        
+        successValidate('conpswd_error');
+        conpswd.style.borderBottom="1px solid gainsboro";
+        return true;
     }
 }
