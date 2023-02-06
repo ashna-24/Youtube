@@ -33,9 +33,9 @@
                             <input type="button" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer" onclick="document.getElementById('fileupload').click()">
                         </div>
                     </form>
-                    <cfif structKeyExists(form, 'videofile')>
+                    <!--- <cfif structKeyExists(form, 'videofile')>
                         <cfinvoke method="getupload" component="components/uploadfile">
-                    </cfif>
+                    </cfif> --->
                 </div>
                 <div class="uploadbottom">
                     <p>

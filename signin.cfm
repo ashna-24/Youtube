@@ -9,46 +9,46 @@
     </head>
     <body class="body">
         <cfoutput>
-        <div class="header flex">
-            <div class="headerLeft flex">
-                <div class="menu pointer">
-                    <img src="assets/menu.png" alt="Not found" class="menuicon">
-                </div>
-                <div class="logo flex pointer">
-                    <img src="assets/youtubelogo.png" alt="Not found" class="ytblogo">
-                    <span class="ytbin">IN</span>
-                </div>
-            </div>
-            <div class="headerMiddle flex">
-                <div class="search flex">
-                    <div class="searchinput">
-                        <input type="search" name="search" id="search" class="ytbsearch" placeholder="Search">
+            <div class="header flex">
+                <div class="headerLeft flex">
+                    <div class="menu pointer">
+                        <img src="assets/menu.png" alt="Not found" class="menuicon">
                     </div>
-                    <div class="searchicon pointer">
-                        <img src="assets/search.png" alt="Not found" class="ytb">
+                    <div class="logo flex pointer">
+                        <img src="assets/youtubelogo.png" alt="Not found" class="ytblogo">
+                        <span class="ytbin">IN</span>
                     </div>
                 </div>
-                <div class="voice pointer">
-                    <img src="assets/mic.png" alt="Not found" class="mic width">
-                </div>
-            </div>
-            <div class="headerRight flex">
-                <div class="account pointer">
-                    <img src="assets/more.png" alt="Not found" class="width">
-                </div>
-                <a onclick="document.getElementById('signin').style.display='block'" class="closetitle pointer">
-                    <div class="right rightalign flex">
-                        <img src="assets/profile.png" alt="Not found" class="width sign">
-                        <span class="signin">Sign in</span>
+                <div class="headerMiddle flex">
+                    <div class="search flex">
+                        <div class="searchinput">
+                            <input type="search" name="search" id="search" class="ytbsearch" placeholder="Search">
+                        </div>
+                        <div class="searchicon pointer">
+                            <img src="assets/search.png" alt="Not found" class="ytb">
+                        </div>
                     </div>
-                </a>
-                <div id="signin" class="w3-modal">
-                    <cfinclude template="login.cfm">
+                    <div class="voice pointer">
+                        <img src="assets/mic.png" alt="Not found" class="mic width">
+                    </div>
+                </div>
+                <div class="headerRight flex">
+                    <div class="account pointer">
+                        <img src="assets/more.png" alt="Not found" class="width">
+                    </div>
+                    <a onclick="document.getElementById('signin').style.display='block'" class="closetitle pointer">
+                        <div class="right rightalign flex">
+                            <img src="assets/profile.png" alt="Not found" class="width sign">
+                            <span class="signin">Sign in</span>
+                        </div>
+                    </a>
+                    <div id="signin" class="w3-modal">
+                        <cfinclude template="login.cfm">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="mainbody flex">
+            <!--- <div class="mainbody flex">
                 <div class="sidebar">
                     <div class="set">
                         <div class="home selected flex padding pointer">
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --->
         </cfoutput>
     </body>
 </html>

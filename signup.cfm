@@ -51,9 +51,9 @@
                             <div id="signin" class="w3-modal">
                                 <cfinclude template="login.cfm">
                             </div>
-                            <cfif structKeyExists(form, 'submit')>
+                            <!--- <cfif structKeyExists(form, 'submit')>
                                 <cfinvoke method="getsignup" component="components/signup">
-                            </cfif>
+                            </cfif> --->
                         </div>
                     </div>
                 </div>

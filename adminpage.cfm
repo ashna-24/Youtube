@@ -10,7 +10,7 @@
     </head>
     <body class="bodycontent">
         <cfoutput>
-            <cfif structKeyExists(session, 'adminflag')>
+            <!--- <cfif structKeyExists(session, 'adminflag')> --->
                 <div class="adminheader flex">
                     <div class="headerLeft flex">
                         <div class="menu">
@@ -58,14 +58,14 @@
                                     <img src="assets/redcomment.png" alt="Not found" class="width contcomments">
                                     <span class="textcont">Content</span>
                                 </div>
-                                <div class="listcontent admin library flex padding pointer">
+                                <a href="comment.cfm" class="decoration"><div class="listcontent admin library flex padding pointer">
                                     <img src="assets/comment.png" alt="Not found" class="width comments">
                                     <span class="textsize">Comments</span>
-                                </div>
-                                <div class="listcontent admin library flex padding pointer">
+                                </div></a>
+                                <a href="" class="decoration"><div class="listcontent admin library flex padding pointer">
                                     <img src="assets/subtitle.png" alt="Not found" class="width comments">
                                     <span class="textsize">Subtitles</span>
-                                </div>
+                                </div></a>
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-            </cfif>
+            <!--- </cfif> --->
         </cfoutput>
     </body>
 </html>

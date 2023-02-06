@@ -28,6 +28,10 @@
     color: black;
 }
 
+.decoration{
+    text-decoration: none;
+}
+
 .header{
     padding-left: 20px;
     position: fixed;

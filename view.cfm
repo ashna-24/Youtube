@@ -9,7 +9,7 @@
     </head>
     <body class="body">
         <cfoutput>
-            <cfif structKeyExists(session, 'userflag')>
+           <!---  <cfif structKeyExists(session, 'userflag')> --->
                 <cfinclude  template="header.cfm">
                 <div class="contview">
                     <div class="flex">
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-            </cfif>
+            <!--- </cfif> --->
         </cfoutput>
     </body>
 </html>
