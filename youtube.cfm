@@ -36,48 +36,47 @@
                     <div class="account pointer">
                         <img src="assets/more.png" alt="Not found" class="width">
                     </div>
-                    <a onclick="document.getElementById('signin').style.display='block'" class="closetitle pointer">
-                        <div class="right rightalign flex">
+                    <button onclick="document.getElementById('signin').style.display='block'" class="closetitle rightalign pointer">
+                        <div class="right flex">
                             <img src="assets/profile.png" alt="Not found" class="width sign">
                             <span class="signin">Sign in</span>
                         </div>
-                    </a>
+                    </button>
                     <div id="signin" class="w3-modal">
                         <cfinclude template="login.cfm">
                     </div>
                 </div>
             </div>
-
-            <!--- <div class="mainbody flex">
-                <div class="sidebar">
+            <div class="mainbody flex">
+                <div class="sidebar sidescroll">
                     <div class="set">
-                        <div class="home selected flex padding pointer">
+                        <a href="youtube.cfm" class="link"><div class="home selected flex padding pointer">
                             <img src="assets/home.png" alt="Not found" class="width">
                             <span class="text">Home</span>
-                        </div>
-                        <div class="home subscriptions flex padding pointer">
+                        </div></a>
+                        <a href="subscriptions.cfm" class="link"><div class="home subscriptions flex padding pointer">
                             <img src="assets/subscriptions.png" alt="Not found" class="width">
                             <span class="text">Subscriptions</span>
                         </div>
                     </div>
                     <div class="set">
-                        <div class="home library flex padding pointer">
+                        <a href="library.cfm" class="link"><div class="home library flex padding pointer">
                             <img src="assets/videolibrary.png" alt="Not found" class="width">
                             <span class="text">Library</span>
                         </div>
-                        <div class="home history flex padding pointer">
+                        <a href="history.cfm" class="link"><div class="home history flex padding pointer">
                             <img src="assets/history.png" alt="Not found" class="width">
                             <span class="text">History</span>
                         </div>
                     </div>
                     <div class="set">
                         <p class="text align">Sign in to like videos,<br>comment, and subscribe.</p>
-                        <a onclick="document.getElementById('signin').style.display='block'" class="closetitle pointer">
+                        <button onclick="document.getElementById('signin').style.display='block'" class="closetitle pointer">
                             <div class="right flex side">
                                 <img src="assets/profile.png" alt="Not found" class="width sign">
                                 <span class="signin">Sign in</span>
                             </div>
-                        </a>
+                        </button>
                     </div>
                     <div class="set">
                         <span class="title">Explore</span>
@@ -111,7 +110,7 @@
                             <span class="text">YouTube Premium</span>
                         </div>
                         <div class="home flex padding pointer">
-                            <img src="assets/ytbmusic.svg" alt="Not found" class="width">
+                            <img src="assets/youtubemusic.png" alt="Not found" class="width">
                             <span class="text">YouTube Music</span>
                         </div>
                         <div class="home flex padding pointer">
@@ -139,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --->
+            </div>
         </cfoutput>
     </body>
 </html>

@@ -48,7 +48,7 @@
 }
 
 .ytblogo{
-    padding-top: 5px;
+    padding-top: 10px;
     max-width: 95px;
 }
 
@@ -128,12 +128,27 @@
 }
 
 .mainbody{
-    padding-top: 59px;
+    padding-top: 65px;
 }
 
 .sidebar{
     margin-left: 12px;
-    width: 215px;
+    width: 218px;
+}
+
+.sidescroll:hover{
+    display: block;
+    overflow: auto;
+    height: 598px;
+}
+
+.sidescroll::-webkit-scrollbar{
+    width: 8px;
+}
+
+.sidescroll::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 5px;
 }
 
 .text{
@@ -147,7 +162,8 @@
 
 .set{
     border-bottom: 1px solid rgb(217, 217, 217);
-    padding: 10px 0px 14px 0px;
+    padding: 10px 10px 14px 0px;
+    width: 200px;
 }
 
 .home:hover{
@@ -205,6 +221,12 @@
     border: none;
     border-radius: 7px;
     width: 325px;
+}
+
+.signupmodal{
+    border-radius: 30px; 
+    margin-bottom: 30px; 
+    width: 950px;
 }
 
 .submit{
@@ -307,7 +329,8 @@
     padding: 10px 0px 12px 0px;
     width: 1065px;
     background-color: white;
-    /* position: fixed; */
+    position: fixed;
+    z-index: -1;
 }
 
 .all{
@@ -604,6 +627,8 @@ tr.conttr{
 
 .closetitle{
     text-decoration: none;
+    background-color: white;
+    border: none;
 }
 
 .uploadimage{
@@ -657,7 +682,7 @@ tr.conttr{
     color: rgb(8, 112, 247);
 }
 
-.displaytext{
+/* .displaytext{
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
@@ -694,4 +719,4 @@ tr.conttr{
 .displaytext:hover .display{
     visibility: visible;
     opacity: 1;
-}
+} */

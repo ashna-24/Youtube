@@ -11,7 +11,8 @@
     </head>
     <body>
         <cfoutput>
-             <div class="w3-modal-content" style="border-radius: 30px; margin-bottom: 30px; width: 950px;">
+            <div class="w3-modal-content signupmodal" <!--- style="border-radius: 30px; margin-bottom: 30px; width: 950px;" --->>
+                <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                 <div class="flex">
                     <div class="red">
                         <img src="assets/signup.jpg" class="signupimg">
@@ -37,20 +38,20 @@
                                 </select> 
                                 <span class="error" id="role_error">Please fill this field!!</span><br>
                                 User Name<span class="colorred">*</span><br>
-                                <input type="text" name="username" id="username" class="inputform" onblur="validatesignup()"><br>
+                                <input type="text" name="uname" id="uname" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="username_error">Please fill this field!!</span><br>
                                 Password<span class="colorred">*</span><br>
-                                <input type="password" name="pswd" id="pswd" class="inputform" onblur="validatesignup()"><br>
-                                <span class="error" id="pwsd_error">Please fill this field!!</span><br>
+                                <input type="password" name="password" id="password" class="inputform" onblur="validatesignup()"><br>
+                                <span class="error" id="password_error">Please fill this field!!</span><br>
                                 Conform Password<span class="colorred">*</span><br>
                                 <input type="password" name="conpswd" id="conpswd" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="conpswd_error">Please fill this field!!</span><br>
                                 <span class="error" id="conform_error">Doesn't match!!</span>
                                 <input type="submit" name="submit" id="submit" value="Register" onclick="document.getElementById('signin').style.display='block'" class="register pointer">
                             </form>
-                            <div id="signin" class="w3-modal">
+                            <!--- <div id="signin" class="w3-modal">
                                 <cfinclude template="login.cfm">
-                            </div>
+                            </div> --->
                             <!--- <cfif structKeyExists(form, 'submit')>
                                 <cfinvoke method="getsignup" component="components/signup">
                             </cfif> --->

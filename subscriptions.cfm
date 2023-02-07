@@ -12,34 +12,34 @@
             <!--- <cfif structKeyExists(session, 'userflag')> --->
                 <cfinclude  template="header.cfm">
                 <div class="mainbody flex">
-                    <div class="sidebar">
+                    <div class="sidebar sidescroll">
                         <div class="set">
-                            <div class="home flex padding pointer">
-                                <img src="assets/home.png" alt="Not found" class="width">
+                            <a href="homepage.cfm" class="link"><div class="home flex padding pointer">
+                                <img src="assets/homefill.png" alt="Not found" class="width">
                                 <span class="text">Home</span>
-                            </div>
-                            <div class="home subscriptions selected flex padding pointer">
-                                <img src="assets/videoplay.png" alt="Not found" class="width">
+                            </div></a>
+                            <a href="subscriptions.cfm" class="link"><div class="home subscriptions selected flex padding pointer">
+                                <img src="assets/subscribe.png" alt="Not found" class="width">
                                 <span class="text">Subscriptions</span>
-                            </div>
+                            </div></a>
                         </div>
                         <div class="set">
-                            <div class="home library flex padding pointer">
-                                <img src="assets/library.png" alt="Not found" class="width">
+                            <a href="library.cfm" class="link"><div class="home library flex padding pointer">
+                                <img src="assets/videolibrary.png" alt="Not found" class="width">
                                 <span class="text">Library</span>
-                            </div>
-                            <div class="home history flex padding pointer">
+                            </div></a>
+                            <a href="history.cfm" class="link"><div class="home history flex padding pointer">
                                 <img src="assets/history.png" alt="Not found" class="width">
                                 <span class="text">History</span>
-                            </div>
-                            <div class="home watch flex padding pointer">
+                            </div></a>
+                            <a href="watchlater.cfm" class="link"><div class="home watch flex padding pointer">
                                 <img src="assets/watchlater.png" alt="Not found" class="width">
                                 <span class="text">Watch later</span>
-                            </div>
-                            <div class="home like flex padding pointer">
+                            </div></a>
+                            <a href="likevideos.cfm" class="link"><div class="home like flex padding pointer">
                                 <img src="assets/like.png" alt="Not found" class="width">
                                 <span class="text">Liked videos</span>
-                            </div>
+                            </div></a>
                         </div>
                         <div class="set">
                             <span class="title">Subscriptions</span>
@@ -74,7 +74,7 @@
                                 <span class="text">YouTube Premium</span>
                             </div>
                             <div class="home flex padding pointer">
-                                <img src="assets/ytbmusic.svg" alt="Not found" class="width">
+                                <img src="assets/youtubemusic.png" alt="Not found" class="width">
                                 <span class="text">YouTube Music</span>
                             </div>
                             <div class="home flex padding pointer">

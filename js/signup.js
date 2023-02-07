@@ -3,16 +3,16 @@ function validatesignup(){
     var email = document.getElementById('email');
     var phonenumber = document.getElementById('number');
     var role = document.getElementById('role');
-    var username = document.getElementById('username');
-    var pswd = document.getElementById('pswd');
+    var uname = document.getElementById('uname');
+    var password = document.getElementById('password');
     var conpswd = document.getElementById('conpswd');
     
     var validatename = fullnamevalidate(fullname);
     var validateemail = emailvalidate(email);
     var validatenumber = numbervalidate(phonenumber);
     var validaterole = rolevalidate(role);
-    var validateusername = usernamevalidate(username);
-    var validatepswd = pswdvalidate(pswd);
+    var validateusername = usernamevalidate(uname);
+    var validatepswd = pswdvalidate(password);
     var validateconpswd = conpswdvalidate(conpswd);
 
     if(validatename && validateemail && validatenumber && validaterole && validateusername && validatepswd && validateconpswd){
@@ -85,29 +85,29 @@ function rolevalidate(role){
     }
 }
 
-function usernamevalidate(username){
-    if(username.value==""){
+function usernamevalidate(uname){
+    if(uname.value==""){
         errorValidate('username_error');
-        username.style.borderBottom="1px solid red";
+        uname.style.borderBottom="1px solid red";
         return false;
     }
     else{
         successValidate('username_error');
-        username.style.borderBottom="1px solid gainsboro";
+        uname.style.borderBottom="1px solid gainsboro";
         return true;
     }
 }
 
-function pswdvalidate(pswd){
+function pswdvalidate(password){
     var pswdmatch = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-    if(pswd.value.match(pswdmatch)){
-        successValidate('pswd_error');
-        pswd.style.borderBottom="1px solid gainsboro";
+    if(password.value.match(pswdmatch)){
+        successValidate('password_error');
+        password.style.borderBottom="1px solid gainsboro";
         return true;
     }
     else{
-        errorValidate('pswd_error');
-        pswd.style.borderBottom="1px solid red";
+        errorValidate('password_error');
+        password.style.borderBottom="1px solid red";
         return false;
     }
 }
@@ -115,10 +115,10 @@ function pswdvalidate(pswd){
 function conpswdvalidate(conpswd){
     if(conpswd.value==""){
         errorValidate('conpswd_error');
-        conpswd.style.border="1px solid red";
+        conpswd.style.borderBottom="1px solid red";
         return false;
     }
-    else if(conpswd.value!=pswd.value){
+    else if(conpswd.value!=password.value){
         errorValidate('conform_error');
         conpswd.style.borderBottom="1px solid red";
         return false;

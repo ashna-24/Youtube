@@ -11,7 +11,7 @@
     </head>
     <body>
         <cfoutput>
-             <div class="w3-modal-content contentmodal" <!--- style="border-radius: 30px; margin-bottom: 30px; width: 930px;" --->>
+             <div class="w3-modal-content contentmodal">
                 <div class="flex">
                     <div class="red">
                         <div class="redicon">
