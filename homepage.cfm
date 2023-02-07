@@ -42,14 +42,14 @@
                             </div></a>
                         </div>
                         <div class="set">
-                            <span class="title">Subscriptions</span>
+                            <div class="title">Subscriptions</div>
                             <div class="home flex padding pointer">
                                 <img src="" alt="Not found" class="width">
                                 <span class="text"></span>
                             </div>
                         </div>
                         <div class="set">
-                            <span class="title">Explore</span>
+                            <div class="title">Explore</div>
                             <div class="home flex padding pointer">
                                 <img src="assets/musicpage.jpg" alt="Not found" class="width sub">
                                 <span class="text">Music</span>
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="set">
-                            <span class="title">More from YouTube</span>
+                            <div class="title">More from YouTube</div>
                             <div class="home flex padding pointer">
                                 <img src="assets/youtubeicon.png" alt="Not found" class="width">
                                 <span class="text">YouTube Premium</span>
@@ -85,20 +85,20 @@
                     </div>
                     <div class="content">
                         <div class="list flex">
-                            <div class="all pointer">
-                                <span class="size">All</span>
+                            <div class="all black">
+                                <span class="size pointer">All</span>
                             </div>
-                            <div class="all pointer">
-                                <span class="size">Music</span>
+                            <div class="all">
+                                <span class="size pointer">Music</span>
                             </div>
-                            <div class="all pointer">
-                                <span class="size">Sports</span>
+                            <div class="all">
+                                <span class="size pointer">Sports</span>
                             </div>
-                            <div class="all pointer">
-                                <span class="size">Trending</span>
+                            <div class="all">
+                                <span class="size pointer">Trending</span>
                             </div>
-                            <div class="all pointer">
-                                <span class="size">Gaming</span>
+                            <div class="all">
+                                <span class="size pointer">Gaming</span>
                             </div>
                         </div>
                     </div>

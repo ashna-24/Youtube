@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css"> 
         <link rel="icon" href="assets/youtubeicon.png">
-        <title>Channel content-YouTube Studio</title>
+        <title>Upload-YouTube Studio</title>
     </head>
     <body>
         <cfoutput>

@@ -7,7 +7,7 @@
         <link rel="icon" href="assets/youtubeicon.png">
         <link rel="stylesheet" href="assets/modal.css">
         <script src="js/signup.js"></script>
-        <title>YouTube Sign in</title>
+        <title>YouTube Sign up</title>
     </head>
     <body>
         <cfoutput>

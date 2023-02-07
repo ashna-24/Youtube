@@ -48,14 +48,14 @@
                             </div></a>
                         </div>
                         <div class="set">
-                            <span class="title">Subscriptions</span>
+                            <div class="title">Subscriptions</div>
                             <div class="home flex padding pointer">
                                 <img src="" alt="Not found" class="width">
                                 <span class="text"></span>
                             </div>
                         </div>
                         <div class="set">
-                            <span class="title">Explore</span>
+                            <div class="title">Explore</div>
                             <div class="home flex padding pointer">
                                 <img src="assets/musicpage.jpg" alt="Not found" class="width sub">
                                 <span class="text">Music</span>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="set">
-                            <span class="title">More from YouTube</span>
+                            <div class="title">More from YouTube</div>
                             <div class="home flex padding pointer">
                                 <img src="assets/youtubeicon.png" alt="Not found" class="width">
                                 <span class="text">YouTube Premium</span>
