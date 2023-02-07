@@ -4,7 +4,7 @@ function validatesignup(){
     var phonenumber = document.getElementById('number');
     var role = document.getElementById('role');
     var uname = document.getElementById('uname');
-    var password = document.getElementById('password');
+    var pswd = document.getElementById('pswd');
     var conpswd = document.getElementById('conpswd');
     
     var validatename = fullnamevalidate(fullname);
@@ -12,7 +12,7 @@ function validatesignup(){
     var validatenumber = numbervalidate(phonenumber);
     var validaterole = rolevalidate(role);
     var validateusername = usernamevalidate(uname);
-    var validatepswd = pswdvalidate(password);
+    var validatepswd = pswdvalidate(pswd);
     var validateconpswd = conpswdvalidate(conpswd);
 
     if(validatename && validateemail && validatenumber && validaterole && validateusername && validatepswd && validateconpswd){
@@ -98,16 +98,16 @@ function usernamevalidate(uname){
     }
 }
 
-function pswdvalidate(password){
+function pswdvalidate(pswd){
     var pswdmatch = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
-    if(password.value.match(pswdmatch)){
+    if(pswd.value.match(pswdmatch)){
         successValidate('password_error');
-        password.style.borderBottom="1px solid gainsboro";
+        pswd.style.borderBottom="1px solid gainsboro";
         return true;
     }
     else{
         errorValidate('password_error');
-        password.style.borderBottom="1px solid red";
+        pswd.style.borderBottom="1px solid red";
         return false;
     }
 }
@@ -118,7 +118,7 @@ function conpswdvalidate(conpswd){
         conpswd.style.borderBottom="1px solid red";
         return false;
     }
-    else if(conpswd.value!=password.value){
+    else if(conpswd.value!=pswd.value){
         errorValidate('conform_error');
         conpswd.style.borderBottom="1px solid red";
         return false;

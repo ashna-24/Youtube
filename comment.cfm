@@ -10,7 +10,7 @@
     </head>
     <body class="bodycontent">
         <cfoutput>
-            <!--- <cfif structKeyExists(session, 'adminflag')> --->
+            <cfif structKeyExists(session, 'adminflag')>
                 <div class="adminheader flex">
                     <div class="headerLeft flex">
                         <div class="menu">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-           <!---  </cfif> --->
+            </cfif>
         </cfoutput>
     </body>
 </html>

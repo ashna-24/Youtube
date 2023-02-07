@@ -1,6 +1,6 @@
 function validatelogin(){
     var username = document.getElementById('username');
-    var password = document.getElementById('pswd');
+    var password = document.getElementById('password');
 
     var unamevalidate = uservalidate(username);
     var pswdvalidate = passwordvalidate(password);

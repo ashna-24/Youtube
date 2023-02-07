@@ -20,7 +20,7 @@
                     <div class="signupset">
                         <p class="signuptxt">Register</p>
                         <div class="regform">
-                            <form action="youtube.cfm" method="post" class="signform" autocomplete="off" onsubmit="return validatesignup()">
+                            <form method="post" class="signform" autocomplete="off" onsubmit="return validatesignup()">
                                 Full Name<span class="colorred">*</span><br>
                                 <input type="text" name="fullname" id="fullname" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="fullname_error">Please fill this field!!</span><br>
@@ -41,16 +41,17 @@
                                 <input type="text" name="uname" id="uname" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="username_error">Please fill this field!!</span><br>
                                 Password<span class="colorred">*</span><br>
-                                <input type="password" name="password" id="password" class="inputform" onblur="validatesignup()"><br>
+                                <input type="password" name="pswd" id="pswd" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="password_error">Please fill this field!!</span><br>
                                 Conform Password<span class="colorred">*</span><br>
                                 <input type="password" name="conpswd" id="conpswd" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="conpswd_error">Please fill this field!!</span><br>
                                 <span class="error" id="conform_error">Doesn't match!!</span>
-                                <input type="submit" name="submit" id="submit" value="Register" class="register pointer">
+                                <input type="submit" name="submit" value="Register" class="register pointer">
                             </form>
                             <cfif structKeyExists(form, 'submit')>
-                                <cfinvoke method="getsignup" component="components/signup">
+                                <cfinvoke method="getsignup" component="components/insert">
+                                <cfset structClear(form)>
                             </cfif>
                         </div>
                     </div>
