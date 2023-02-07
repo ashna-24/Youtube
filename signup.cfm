@@ -11,7 +11,7 @@
     </head>
     <body>
         <cfoutput>
-            <div class="w3-modal-content signupmodal" <!--- style="border-radius: 30px; margin-bottom: 30px; width: 950px;" --->>
+            <div class="w3-modal-content signupmodal">
                 <span onclick="document.getElementById('signup').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                 <div class="flex">
                     <div class="red">
@@ -20,7 +20,7 @@
                     <div class="signupset">
                         <p class="signuptxt">Register</p>
                         <div class="regform">
-                            <form method="post" class="signform" autocomplete="off" onsubmit="return validatesignup()">
+                            <form action="youtube.cfm" method="post" class="signform" autocomplete="off" onsubmit="return validatesignup()">
                                 Full Name<span class="colorred">*</span><br>
                                 <input type="text" name="fullname" id="fullname" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="fullname_error">Please fill this field!!</span><br>
@@ -47,14 +47,11 @@
                                 <input type="password" name="conpswd" id="conpswd" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="conpswd_error">Please fill this field!!</span><br>
                                 <span class="error" id="conform_error">Doesn't match!!</span>
-                                <input type="submit" name="submit" id="submit" value="Register" onclick="document.getElementById('signin').style.display='block'" class="register pointer">
+                                <input type="submit" name="submit" id="submit" value="Register" class="register pointer">
                             </form>
-                            <!--- <div id="signin" class="w3-modal">
-                                <cfinclude template="login.cfm">
-                            </div> --->
-                            <!--- <cfif structKeyExists(form, 'submit')>
+                            <cfif structKeyExists(form, 'submit')>
                                 <cfinvoke method="getsignup" component="components/signup">
-                            </cfif> --->
+                            </cfif>
                         </div>
                     </div>
                 </div>

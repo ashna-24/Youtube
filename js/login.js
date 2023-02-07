@@ -29,6 +29,7 @@ function uservalidate(username){
     }
     else{
         successValidate('uname_error');
+        username.style.border="none";
         return true;
     }
 }
@@ -37,6 +38,7 @@ function passwordvalidate(password){
     var passw=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
     if(password.value.match(passw)){
         successValidate('pswd_error');
+        password.style.border="none";
         return true;
     }else{
         errorValidate('pswd_error');

@@ -11,7 +11,8 @@
     </head>
     <body>
         <cfoutput>
-             <div class="w3-modal-content contentmodal">
+            <div class="w3-modal-content contentmodal">
+                <span onclick="document.getElementById('signin').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                 <div class="flex">
                     <div class="red">
                         <div class="redicon">
