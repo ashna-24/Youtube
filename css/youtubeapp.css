@@ -108,15 +108,16 @@
 
 .headerRight{
     align-items: center;
-    margin-left: 175px;
+    margin-left: 160px;
 }
 
 .create{
-    margin-right: 22px;
+    padding: 6px;
 }
 
 .notification{
-    margin-right: 30px;
+    margin-right: 25px;
+    padding: 5px;
 }
 
 .letter{
@@ -486,23 +487,31 @@
 
 .selectcomment{
     border-style: none none none solid;
-    border-color: red;
+    border-color: rgb(204,1,1);
     border-width: 5px;
     background-color: rgb(242, 242, 242);
 }
 
 .comments{
-    margin-left: 20px;
+    margin-left: 15px;
+}
+
+.subtitle{
+    margin-left: 10px;
 }
 
 .textcont{
-    color: red;
+    color: rgb(204,1,1);
     font-size: 14px;
     font-weight: bold;
     padding: 4px 0px 0px 20px;
 }
 
 .contcomments{
+    margin-left: 10px;
+}
+
+.contentcomments{
     margin-left: 15px;
 }
 
@@ -706,6 +715,67 @@ tr.conttr{
 .watchhistory{
     font-size: 16px;
     color: rgb(38, 38, 38);
+}
+
+.typehistory{
+    border-bottom: 1px solid gainsboro;
+    padding: 15px 20px;
+}
+
+.choose{
+    border-bottom: 1px solid gainsboro;
+    padding: 15px 20px;
+    font-size: 14px;
+}
+
+.radiobtn{
+    width: 18px;
+    height: 18px;
+    accent-color: rgb(6,95,212);
+}
+
+.watched{
+    margin-left: 218px; 
+}
+
+.community{
+    margin-left: 232px;
+}
+
+.clearall{
+    padding: 15px 20px;
+}
+
+.clearhover{
+    padding: 5px 15px;
+}
+
+.trash{
+    margin-left: 10px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.clearallhistory{
+    font-weight: bold;
+    color: #aaa;
+}
+
+.textspan{
+    font-size: 14px;
+    padding: 5px 0px 0px 42px;
+    color: #909090;
+    font-weight: bold;
+}
+
+.historyhover{
+    width: 175px;
+    padding: 5px;
+}
+
+.historyhover:hover{
+    background-color: gainsboro;
+    border-radius: 30px;
 }
 
 /* .displaytext{

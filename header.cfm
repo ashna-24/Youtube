@@ -36,9 +36,9 @@
             </div>
             <div class="headerRight flex">
                 <div class="rightimg flex">
-                    <img src="assets/video.png" alt="Not found" class="create width">
+                    <img src="assets/video.png" alt="Not found" class="create width voice">
                     
-                    <img src="assets/notifications.png" alt="Not found" class="notification width">
+                    <img src="assets/notifications.png" alt="Not found" class="notification width voice">
                     
                 </div>
                 <div class="account">

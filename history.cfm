@@ -89,27 +89,41 @@
                                 <h6 class="watchhistory">Watch history</h6>
                             </div>
                             <div class="historyselect">
-                                <span class="typehistory">History Type</span>
+                                <p class="typehistory">History Type</p>
                                 <div class="selecttype">
-                                    Watch history<input type="radio" name="radiobtn" id="radiobtn" class="radiobtn" checked>
-                                    Community<input type="radio" name="radio" id="radio" class="radiobtn">
+                                    <div class="choose flex pointer">
+                                        Watch history
+                                        <input type="radio" name="radiobtn" id="radiobtn" class="radiobtn watched" checked><br>
+                                    </div>
+                                    <div class="choose flex pointer">
+                                        Community
+                                        <input type="radio" name="radio" id="radio" class="radiobtn community">
+                                    </div>
                                 </div>
-                                <div class="clearall">
-                                    <img src="assets/trash.png" alt="Not Found" class="trash">
-                                    <span class="text">Clear all watch history</span>
+                                <div class="clearall flex">
+                                    <img src="assets/trash.png" alt="Not Found" class="width">
+                                    <span class="trash clearallhistory">Clear all watch history</span>
                                 </div>
-                                <div class="clearall">
-                                    <img src="assets/playbutton.png" alt="Not Found" class="trash">
-                                    <span class="text">Turn on watch history</span>
+                                <div class="clearhover">
+                                    <div class="historyhover flex">
+                                        <img src="assets/playbutton.png" alt="Not Found" class="width">
+                                        <span class="trash">Turn on watch history</span>
+                                    </div>
                                 </div>
-                                <div class="clearall">
-                                    <img src="assets/settings.png" alt="Not Found" class="trash">
-                                    <span class="text">Manage all history</span>
+                                <div class="clearhover">
+                                    <div class="historyhover flex">
+                                        <img src="assets/settings.png" alt="Not Found" class="width">
+                                        <span class="trash">Manage all history</span>
+                                    </div>
                                 </div>
-                                <div class="clearall">
-                                    <span class="text">Watch and search history</span>
-                                    <span class="text">Comments</span>
-                                    <span class="text">Live chat</span>
+                                <div class="clearall flex">
+                                    <span class="textspan">Watch and search history</span><br>
+                                </div>
+                                <div class="clearall flex">
+                                    <span class="textspan">Comments</span><br>
+                                </div>
+                                <div class="clearall flex">
+                                    <span class="textspan">Live chat</span>
                                 </div>
                             </div>
                         </div>

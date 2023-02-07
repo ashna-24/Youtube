@@ -10,7 +10,7 @@
     </head>
     <body class="bodycontent">
         <cfoutput>
-            <cfif structKeyExists(session, 'adminflag')>
+            <!--- <cfif structKeyExists(session, 'adminflag')> --->
                 <div class="adminheader flex">
                     <div class="headerLeft flex">
                         <div class="menu">
@@ -54,13 +54,13 @@
                         </div>
                         <div class="settwo">
                             <div class="listdta">
-                                <div class="listcontent admin library flex padding pointer">
-                                    <img src="assets/redcomment.png" alt="Not found" class="width contcomments">
-                                    <span class="textcont">Content</span>
-                                </div>
+                                <a href="adminpage.cfm" class="link"><div class="listcontent admin library flex padding pointer">
+                                    <img src="assets/library.png" alt="Not found" class="width contentcomments">
+                                    <span class="textsize">Content</span>
+                                </div></a>
                                 <div class="listcontent admin library flex padding pointer selectcomment">
-                                    <img src="assets/redcomt.png" alt="Not found" class="width comments">
-                                    <span class="textsize">Comments</span>
+                                    <img src="assets/redcomt.png" alt="Not found" class="width subtitle">
+                                    <span class="textcont">Comments</span>
                                 </div>
                                 <div class="listcontent admin library flex padding pointer">
                                     <img src="assets/subtitle.png" alt="Not found" class="width comments">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-            </cfif>
+            <!--- </cfif> --->
         </cfoutput>
     </body>
 </html>
