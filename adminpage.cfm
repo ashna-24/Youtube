@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/youtubeapp.css"> 
         <link rel="icon" href="assets/youtubeicon.png">
         <link rel="stylesheet" href="assets/modal.css">
+        <script src="js/upload.js"></script>
         <title>Channel content-YouTube Studio</title>
     </head>
     <body class="bodycontent">
@@ -34,9 +35,17 @@
                         <div class="help">
                             <img src="assets/help.png" alt="Not found" class="width">
                         </div>
-                        <div class="rightcreate flex">
+                        <div class="rightcreate createupload" onclick="create()">
                             <img src="assets/upload.png" alt="Not found" class="width createwidth">
                             <h5 class="msg">CREATE</h5>
+                            <span class="popup" id="popuptext">
+                                <button onclick="document.getElementById('upload').style.display='block'" class="createbutton">
+                                    <span class="videocreate">
+                                        <img src="assets/uploadarrow.png" alt="Not found" class="uploadarrow">
+                                        Upload videos
+                                    </span>
+                                </button>
+                            </span>
                         </div>
                         <div class="account">
                             <span class="letter">A</span>
@@ -80,13 +89,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="filterset flex">
+                        <div class="filterset flex filtersearch" onclick="filter()">
                             <div class="filterimg pointer">
                                 <img src="assets/filter.png" alt="Not found" class="setimg">
                             </div>
                             <div>
                                 <input type="search" placeholder="Filter" name="fitler" id="filter" class="filter">
                             </div>
+                            <span class="filterpopup" id="filtertext">
+                                <p class="filterlist">Age restriction</p>
+                                <p class="filterlist">Description</p>
+                                <p class="filterlist">Title</p>
+                                <p class="filterlist">Views</p>
+                            </span>
                         </div>
                         <div class="setthree">
                             <div class="video">

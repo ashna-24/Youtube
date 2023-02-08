@@ -28,7 +28,7 @@
                                 <img src="assets/library.png" alt="Not found" class="width">
                                 <span class="text">Library</span>
                             </div></a>
-                            <a href="history.cfm" class="link"><div class="home history flex padding pointer">
+                            <a href="history.cfm" class="link"><div class="home flex padding pointer">
                                 <img src="assets/history.png" alt="Not found" class="width">
                                 <span class="text">History</span>
                             </div></a>
@@ -83,8 +83,41 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content">
-                        
+                    <div class="content flex">
+                        <div class="libcont">
+                            <div class="libhistory">
+                                <a href="history.cfm" class="link">
+                                    <div class="history flex pointer">
+                                        <img src="assets/history.png" alt="Not found" class="width">
+                                        <span class="libtext">History</span>
+                                    </div>
+                                </a>
+                                <p class="libp">Videos you watch will show up here. <a href="homepage.cfm" class="link browse">Browse videos</a></p>
+                            </div>
+                            <div class="libhistory">
+                                <a href="watchlater.cfm" class="link">
+                                    <div class="history flex pointer">
+                                        <img src="assets/watchlater.png" alt="Not found" class="width">
+                                        <span class="libtext">Watch Later</span>
+                                    </div>
+                                </a>
+                                <p class="libp">Save videos to watch later. Your list shows up right here.</p>
+                            </div>
+                            <div class="libhistory">
+                                <a href="likevideos.cfm" class="link">
+                                    <div class="history flex pointer">
+                                        <img src="assets/like.png" alt="Not found" class="width">
+                                        <span class="libtext">Like Videos</span>
+                                    </div>
+                                </a>
+                                <p class="libp">Use the thumbs up icon to like videos. Your list shows up right here.</p>
+                            </div>
+                        </div>
+                        <div class="libside">
+                            <div class="libletter">
+                                <span class="username">A</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             <!--- </cfif> --->

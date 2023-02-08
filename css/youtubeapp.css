@@ -115,6 +115,50 @@
     padding: 6px;
 }
 
+.createupload{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.createupload .popup{
+    display: none;
+    width: 185px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    right: 0px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+    padding: 10px 0px;
+}
+
+.createupload .show{
+    display: block;
+}
+
+.videocreate{
+    padding: 8px 21px 8px 25px;
+    font-size: 15px;
+}
+
+.videocreate:hover{
+    background-color: rgb(242, 242, 242);
+}
+
+.createbutton{
+    border: none;
+    background-color: white;
+}
+
+.uploadarrow{
+    margin: 0px 15px 10px 0px;
+    padding-top: 4px;
+    width: 24px;
+}
+
 .notification{
     margin-right: 25px;
     padding: 5px;
@@ -400,6 +444,7 @@
     border: 1px solid rgb(242, 242, 242);
     padding: 0px 10px;
     width: 100px;
+    display: flex;
     margin-right: 15px;
 }
 
@@ -549,6 +594,7 @@
 }
 
 .filterset{
+    display: flex;
     padding: 15px 0px 10px 30px;
     border-bottom: 1px solid rgb(231,231,231);
 }
@@ -598,7 +644,7 @@ tr.conttr{
 }
 
 .nocontent{
-    margin: 45px 0px 50px 470px;
+    margin: 45px 0px 18px 470px;
 }
 
 .notavailable{
@@ -776,6 +822,80 @@ tr.conttr{
 .historyhover:hover{
     background-color: gainsboro;
     border-radius: 30px;
+}
+
+.filtersearch{
+    position: relative;
+    user-select: none;
+}
+
+.filterlist{
+    padding: 5px 0px 8px 25px;
+}
+
+.filterlist:hover{
+    background-color: rgb(242, 242, 242);
+}
+
+.filtersearch .filterpopup{
+    display: none;
+    width: 170px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+    top: 55px;
+    left: 85px;
+}
+
+.filtersearch .show{
+    display: block;
+}
+
+.filterpopup{
+    padding: 10px 0px;
+}
+
+.libtext{
+    padding: 3px 0px 0px 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.libhistory{
+    padding: 20px 0px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.history{
+    padding-bottom: 10px;
+}
+
+.libcont{
+    width:855px;
+}
+
+.libp{
+    font-size: 14px;
+}
+
+.browse{
+    color: rgb(6, 95, 212);
+}
+
+.libside{
+    margin: 80px 0px 0px 20px;
+}
+
+.libletter{
+    width: 55px;
+    border: none;
+    border-radius: 60px;
+    font-size: 36px;
+    color: white;
+    padding: 20px 13px;
+    background-color: rgb(191,54,12);
 }
 
 /* .displaytext{

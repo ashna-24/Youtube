@@ -28,14 +28,15 @@
                         <p class="private">Your videos will be private until you publish them.</p>
                     </div>
                     <form method="post" enctype="multipart/form-data">
-                        <input type="file" id="fileupload" name="fileupload" style="visibility:hidden;">
+                        <input type="file" id="fileupload" name="fileupload" >
                         <div class="selectfile">
-                            <input type="button" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer" onclick="document.getElementById('fileupload').click()">
+                            <input type="submit" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer"<!---  onclick="document.getElementById('fileupload').click()" --->>
                         </div>
                     </form>
-                    <!--- <cfif structKeyExists(form, 'videofile')>
-                        <cfinvoke method="getupload" component="components/uploadfile">
-                    </cfif> --->
+                    <cfif structKeyExists(form, 'videofile')>
+                        <cfinvoke method="getupload" component="components/upload">
+                        <cfset structClear(form)>
+                    </cfif>
                 </div>
                 <div class="uploadbottom">
                     <p>
