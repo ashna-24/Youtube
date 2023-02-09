@@ -9,7 +9,7 @@
     </head>
     <body class="body">
         <cfoutput>
-            <!--- <cfif structKeyExists(session, 'userflag')> --->
+            <cfif structKeyExists(session, 'userflag')>
                 <cfinclude  template="header.cfm">
                 <div class="mainbody flex">
                     <div class="sidebar sidescroll">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-            <!--- </cfif> --->
+            </cfif>
         </cfoutput>
     </body>
 </html>

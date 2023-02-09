@@ -11,7 +11,7 @@
     </head>
     <body class="bodycontent">
         <cfoutput>
-            <!--- <cfif structKeyExists(session, 'adminflag')> --->
+            <cfif structKeyExists(session, 'adminflag')>
                 <div class="adminheader flex">
                     <div class="headerLeft flex">
                         <div class="menu">
@@ -101,6 +101,7 @@
                                 <p class="filterlist">Description</p>
                                 <p class="filterlist">Title</p>
                                 <p class="filterlist">Views</p>
+                                <p class="filterlist">Visibility</p>
                             </span>
                         </div>
                         <div class="setthree">
@@ -110,6 +111,12 @@
                                         <td class="checkbox pointer tablepadding">
                                             <input type="checkbox" name="check" id="check" class="check font">
                                             <span class="font color">Video</span>
+                                        </td>
+                                        <td class="listtd pointer tablepadding">
+                                            <span class="font color visibility">Visibility</span>
+                                        </td>
+                                        <td class="listtd pointer tablepadding">
+                                            <span class="font color">Restrictions</span>
                                         </td>
                                         <td class="listtd pointer tablepadding">
                                             <span class="bold font">Date</span>
@@ -151,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-            <!--- </cfif> --->
+            </cfif>
         </cfoutput>
     </body>
 </html>

@@ -137,6 +137,12 @@
                             <span class="size">Gaming</span>
                         </div>
                     </div>
+                    <div class="youtubehome">
+                        <!--- <cfinvoke method="getupload" component="components/upload"> --->
+                        
+                            <cfmediaplayer source="#expandpath(".\assets\uploadedfile\#session.uploadedfile#")#" name="myImage">
+                        
+                    </div>
                 </div>
             </div>
         </cfoutput>

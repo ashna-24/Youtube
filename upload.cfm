@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css"> 
         <link rel="icon" href="assets/youtubeicon.png">
+        <link rel="stylesheet" href="assets/modal.css">
         <title>Upload-YouTube Studio</title>
     </head>
     <body>
@@ -28,11 +29,21 @@
                         <p class="private">Your videos will be private until you publish them.</p>
                     </div>
                     <form method="post" enctype="multipart/form-data">
-                        <input type="file" id="fileupload" name="fileupload" >
+                        <input type="file" id="fileupload" name="fileupload" accept="video/*" style="visibility:hidden">
                         <div class="selectfile">
-                            <input type="submit" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer"<!---  onclick="document.getElementById('fileupload').click()" --->>
+                            <a onclick="document.getElementById('uploadform').style.display='block'">
+                                <input type="button" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer">
+                            </a>
+                            <!--- <input type="submit" onclick="document.getElementById('upload').click()" name="videofile" id="videofile" class="videofile pointer" value="SELECT FILES"> --->
                         </div>
                     </form>
+                    <!--- <div id="upload">
+                        <a onclick="document.getElementById('uploadform').style.display='block'">
+                            <div id="uploadform" class="w3-modal">
+                                <cfinclude template="uploadform.cfm">
+                            </div>
+                        </a>
+                    </div> --->
                     <cfif structKeyExists(form, 'videofile')>
                         <cfinvoke method="getupload" component="components/upload">
                         <cfset structClear(form)>

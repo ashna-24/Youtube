@@ -1,9 +1,9 @@
 use query
 
 create table uploaddata(ID int identity(1,1) primary key,
-						FileUpload varchar(30));
+						FileUpload varchar(100));
 select * from uploaddata
-
+drop table uploaddata
 create table signup(ID int IDENTITY(101, 1) PRIMARY KEY,
 					FullName varchar(20),
 					Email varchar(40),

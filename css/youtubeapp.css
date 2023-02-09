@@ -627,12 +627,16 @@ tr.conttr{
 }
 
 .tablepadding{
-    padding: 10px 0px;
+    padding: 15px 0px;
+}
+
+.visibility{
+    padding-left: 20px;
 }
 
 .checkbox{
-    column-width: 460px;
-    border-right: 1px solid rgb(231,231,231);
+    column-width: 640px;
+    border-right: 2px solid rgb(231,231,231);
 }
 
 .check{
@@ -845,7 +849,8 @@ tr.conttr{
     position: absolute;
     z-index: 1;
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
-    top: 55px;
+    top: 53px;
+    border-radius: 5px;
     left: 85px;
 }
 

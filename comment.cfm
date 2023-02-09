@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css"> 
         <link rel="icon" href="assets/youtubeicon.png">
+        <script src="js/upload.js"></script>
         <link rel="stylesheet" href="assets/modal.css">
         <title>Channel content-YouTube Studio</title>
     </head>
     <body class="bodycontent">
         <cfoutput>
-            <!--- <cfif structKeyExists(session, 'adminflag')> --->
+            <cfif structKeyExists(session, 'adminflag')>
                 <div class="adminheader flex">
                     <div class="headerLeft flex">
                         <div class="menu">
@@ -34,9 +35,20 @@
                         <div class="help">
                             <img src="assets/help.png" alt="Not found" class="width">
                         </div>
-                        <div class="rightcreate flex">
+                        <div class="rightcreate createupload" onclick="create()">
                             <img src="assets/upload.png" alt="Not found" class="width createwidth">
                             <h5 class="msg">CREATE</h5>
+                            <span class="popup" id="popuptext">
+                                <button onclick="document.getElementById('upload').style.display='block'" class="createbutton">
+                                    <span class="videocreate">
+                                        <img src="assets/uploadarrow.png" alt="Not found" class="uploadarrow">
+                                        Upload videos
+                                    </span>
+                                </button>
+                            </span>
+                            <div id="upload" class="w3-modal">
+                                <cfinclude template="upload.cfm">
+                            </div>
                         </div>
                         <div class="account">
                             <span class="letter">A</span>
@@ -70,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-            <!--- </cfif> --->
+            </cfif>
         </cfoutput>
     </body>
 </html>
