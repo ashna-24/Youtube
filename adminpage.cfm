@@ -7,6 +7,7 @@
         <link rel="icon" href="assets/youtubeicon.png">
         <link rel="stylesheet" href="assets/modal.css">
         <script src="js/upload.js"></script>
+        <script src="js/videoupload.js"></script>
         <title>Channel content-YouTube Studio</title>
     </head>
     <body class="bodycontent">
@@ -106,6 +107,7 @@
                         </div>
                         <div class="setthree">
                             <div class="video">
+                                <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
                                 <table class="video ">
                                     <tr class="conttr">
                                         <td class="checkbox pointer tablepadding">
@@ -128,21 +130,37 @@
                                             <span class="font color">Comments</span>
                                         </td>
                                         <td class="listtd pointer tablepadding">
-                                            <span class="font color">Likes(vs. dislikes)</span>
+                                            <span class="font color">Likes</span>
                                         </td>
                                     </tr>
-                                    <tr class="conttr">
-                                        <td class="tablepadding">
-                                        </td>
-                                        <td class="tablepadding">
-                                        </td>
-                                        <td class="tablepadding">
-                                        </td>
-                                        <td class="tablepadding">
-                                        </td>
-                                        <td class="tablepadding">
-                                        </td>
-                                    </tr>
+                                    <cfloop query="uploadVideo">
+                                        <tr class="conttr">
+                                            <td class="tablevideopadding checkbox pointer">
+                                                <div class="videotd flex">
+                                                    <input type="checkbox" name="check" id="check" class="check font">
+                                                    <div class="videouploadfile">
+                                                        <video width="150px" controls height="100px" id="upvideo_#uploadVideo.FileUpload#" onclick="openFullscreen(#uploadVideo.FileUpload#)">
+                                                            <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                                        </video>
+                                                    </div>
+                                                    <div class="videouploadtitle">
+                                                        <span class="titleupload">#uploadVideo.Title#</span><br>
+                                                        <span class="desupload">#uploadVideo.Description#</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="tablevideopadding">
+                                                <div class="uploadvisible">#uploadVideo.Visibility#</div>
+                                            </td>
+                                            <td class="tablevideopadding">
+                                            </td>
+                                            <td class="tablevideopadding">
+                                                <div class="uploadvisible">#uploadVideo.UploadDate#</div>
+                                            </td>
+                                            <td class="tablevideopadding">
+                                            </td>
+                                        </tr>
+                                    </cfloop>
                                 </table>
                             </div>
                             <div class="nocontent">

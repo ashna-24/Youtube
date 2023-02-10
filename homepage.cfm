@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
+        <script src="js/videoupload.js"></script>
         <title>YouTube</title> 
     </head>
     <body class="body">
@@ -84,6 +85,7 @@
                         </div>
                     </div>
                     <div class="content">
+                        <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
                         <div class="list flex">
                             <div class="all black">
                                 <span class="size pointer">All</span>
@@ -100,6 +102,18 @@
                             <div class="all">
                                 <span class="size pointer">Gaming</span>
                             </div>
+                        </div>
+                        <div class="youtubehome">
+                            <cfloop query="uploadVideo">
+                                <!--- <cfinvoke method="getupload" component="components/upload" returnVariable="result"> --->
+                                <!--- <cfmediaplayer source="#expandpath(".\assets\uploadedfile\#session.uploadedfile#")#" width="200px" height="150px" name="myImage"> --->
+                                <!--- <cfdump var="#result#"> --->
+                                <span class="videoset">
+                                    <video width="250px" controls height="150px" id="upvideo" onclick="openFullscreen()">
+                                        <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                    </video>
+                                </span>
+                            </cfloop>
                         </div>
                     </div>
                 </div>

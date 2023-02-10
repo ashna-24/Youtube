@@ -3,7 +3,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/youtubeapp.css"> 
+        <link rel="stylesheet" href="css/youtubeapp.css">
+        <script src="js/videoupload.js"></script> 
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title>
     </head>
@@ -120,6 +121,7 @@
                     </div>
                 </div>
                 <div class="content">
+                    <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
                     <div class="list flex">
                         <div class="all pointer black">
                             <span class="size">All</span>
@@ -138,10 +140,16 @@
                         </div>
                     </div>
                     <div class="youtubehome">
-                        <!--- <cfinvoke method="getupload" component="components/upload"> --->
-                        
-                            <cfmediaplayer source="#expandpath(".\assets\uploadedfile\#session.uploadedfile#")#" name="myImage">
-                        
+                        <cfloop query="uploadVideo">
+                            <!--- <cfinvoke method="getupload" component="components/upload" returnVariable="result"> --->
+                            <!--- <cfmediaplayer source="#expandpath(".\assets\uploadedfile\#session.uploadedfile#")#" width="200px" height="150px" name="myImage"> --->
+                            <!--- <cfdump var="#result#"> --->
+                            <span class="videoset">
+                                <video width="250px" controls height="150px" id="upvideo" onclick="openFullscreen()">
+                                    <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                </video>
+                            </span>
+                        </cfloop>
                     </div>
                 </div>
             </div>
