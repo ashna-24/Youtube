@@ -20,7 +20,7 @@
                     <div class="signupset">
                         <p class="signuptxt">Register</p>
                         <div class="regform">
-                            <form method="post" class="signform" autocomplete="off" onsubmit="return validatesignup()">
+                            <form method="post" class="signform" autocomplete="off" enctype="multipart/form-data" onsubmit="return validatesignup()">
                                 Full Name<span class="colorred">*</span><br>
                                 <input type="text" name="fullname" id="fullname" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="fullname_error">Please fill this field!!</span><br>
@@ -37,6 +37,9 @@
                                     <option>Admin</option>
                                 </select> 
                                 <span class="error" id="role_error">Please fill this field!!</span><br>
+                                Account Profile<span class="colorred">*</span><br>
+                                <input type="file" name="file" id="file" class="inputform" onblur="validatesignup()"><br>
+                                <span class="error" id="file_error">Please fill this field!!</span><br>
                                 User Name<span class="colorred">*</span><br>
                                 <input type="text" name="uname" id="uname" class="inputform" onblur="validatesignup()"><br>
                                 <span class="error" id="username_error">Please fill this field!!</span><br>

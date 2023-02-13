@@ -1,9 +1,9 @@
 <cfcomponent>
-    <cffunction name="getlogin" access="remote">
+    <cffunction name="getlogin" access="remote" returnType="query">
         <cfargument name="username" type="any" default="#form.username#">
         <cfargument name="password" type="any" default="#form.password#">
         <cfquery name="loginQuery">
-            SELECT UserName, Password, LoginRole
+            SELECT *
             FROM signup
             WHERE UserName = <cfqueryparam value="#arguments.username#" cfsqltype="cf_sql_varchar">
             AND Password = <cfqueryparam value="#arguments.password#" cfsqltype="cf_sql_varchar">

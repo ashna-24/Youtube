@@ -139,16 +139,29 @@
                             <span class="size">Gaming</span>
                         </div>
                     </div>
-                    <div class="youtubehome">
+                    <div class="youtubehome flex">
                         <cfloop query="uploadVideo">
                             <!--- <cfinvoke method="getupload" component="components/upload" returnVariable="result"> --->
                             <!--- <cfmediaplayer source="#expandpath(".\assets\uploadedfile\#session.uploadedfile#")#" width="200px" height="150px" name="myImage"> --->
                             <!--- <cfdump var="#result#"> --->
-                            <span class="videoset">
-                                <video width="250px" controls height="150px" id="upvideo" onclick="openFullscreen()">
-                                    <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
-                                </video>
-                            </span>
+                            <div class="video1">
+                                <span class="videoset">
+                                    <video width="260px" controls height="150px" class="upvideo" id="upvideo" onclick="openFullscreen()">
+                                        <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                    </video>
+                                </span>
+                                <div class="videodtls flex">
+                                    <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
+                                    <span class="videoimg">
+                                        <cfset local.profileimage = uploadlogin.Profile>
+                                        <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
+                                    </span>
+                                   <div class="videodiv">
+                                            <h3 class="videoh3">#uploadVideo.Title#</h3><br>
+                                        </div>
+                                    <!--- #uploadVideo.Description# --->
+                                </div>
+                            </div>
                         </cfloop>
                     </div>
                 </div>

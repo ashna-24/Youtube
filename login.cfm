@@ -7,6 +7,7 @@
         <link rel="icon" href="assets/youtubeicon.png">
         <link rel="stylesheet" href="assets/modal.css">
         <script src="js/signin.js"></script>
+        <script src="js/adminprofile.js"></script>
         <title>YouTube Sign in</title>
     </head>
     <body>
@@ -26,6 +27,11 @@
                         <div class="signintext">
                             <p class="logintxt">LOGIN</p>
                             <div class="signinform">
+                                <cfif structKeyExists(form, 'login')>
+                                    <cfinvoke method="getlogin" component="components/signin">
+                                    <cfset structClear(form)>
+                                </cfif>
+                                <!--- <cfset session.username = loginQuery.UserName> --->
                                 <form method="post" autocomplete="off" class="loginform" onsubmit="return validatelogin()">
                                     Username<br>
                                     <input type="text" name="username" id="username" class="inputlogin" onblur="validatelogin()"><br>
@@ -33,12 +39,8 @@
                                     Password<br>
                                     <input type="password" name="password" id="password" class="inputlogin" onblur="validatelogin()"><br>
                                     <span id="pswd_error" class="error">Please Enter This Field!!</span>
-                                    <input type="submit" name="login" id="submit" value="Login" class="submit pointer">
+                                    <input type="submit" name="login" id="submit" value="Login" <!--- onclick="adminProfile('#session.username#')" ---> class="submit pointer">
                                 </form>
-                                <cfif structKeyExists(form, 'login')>
-                                    <cfinvoke method="getlogin" component="components/signin">
-                                    <cfset structClear(form)>
-                                </cfif>
                             </div>
                             <p class="optional">Don't have an account?<a onclick="document.getElementById('signup').style.display='block'" class="closetitle blue pointer">Register Here</a></p>
                             <div id="signup" class="w3-modal">

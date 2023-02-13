@@ -16,7 +16,7 @@
         </cfquery>
         <cfif uploadQuery.recordcount eq 0>
             <cfquery name="insertQuery">
-                INSERT INTO uploaddata(FileUpload, Title, Description, Visibility, UploadDate)
+                INSERT INTO uploaddata(FileUpload, Title, Description, Visibility, DateOfPublishing)
                 VALUES  (
                         <cfqueryparam value="#session.uploadedfile#" cfsqltype="cf_sql_varchar">,
                         <cfqueryparam value="#arguments.title#" cfsqltype="cf_sql_varchar">,

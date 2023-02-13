@@ -116,6 +116,14 @@
     padding: 6px;
 }
 
+.upvideo{
+    border-radius: 12px;
+}
+
+.videodiv{
+    width: 200px;
+}
+
 .createupload{
     position: relative;
     display: inline-block;
@@ -314,6 +322,7 @@
 
 .signupimg{
     width: 470px;
+    min-height: 100%;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
 }
@@ -493,13 +502,7 @@
 }
 
 .spanletter{
-    width: 117px;
-    border: none;
-    border-radius: 60px;
-    font-size: 56px;
-    color: white;
-    padding: 17px 26px;
-    background-color: rgb(191,54,12);
+    cursor: pointer;
 }
 
 .yours{
@@ -524,7 +527,7 @@
 }
 
 .setone{
-    margin-left: 75px;
+    margin: 0px 0px 25px 75px;
     padding-top: 25px;
 }
 
@@ -552,6 +555,11 @@
     font-size: 14px;
     font-weight: bold;
     padding: 4px 0px 0px 20px;
+}
+
+.profiletext{
+    font-size: 13px;
+    padding-left: 18px;
 }
 
 .contcomments{
@@ -960,6 +968,26 @@ tr.conttr{
 .uploadvisible{
     text-align: center;
     font-size: 13px;
+}
+
+.userImg{
+    width: 120px;
+    border-radius: 60px;
+}
+
+.videodtls{
+    margin-top: 10px;
+}
+
+.videoh3{
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.videoimg{
+    width: 42px;
+    padding: 5px;
+    border-radius: 25px;
 }
 
 /* .displaytext{

@@ -56,11 +56,16 @@
 
                 <div class="adminmainbody flex">
                     <div class="adminsidebar">
+                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
                         <div class="setone">
-                            <div class="spanletter">
-                                <span class="username">A</span>
-                            </div>
-                            <p class="yours">Your channel</p>
+                            <!--- <cfloop query="uploadlogin"> --->
+                                <span class="viewimg">
+                                    <cfset local.profileimage = uploadlogin.Profile>
+                                    <img src="assets/file/#local.profileimage#" name="myImage" class="userImg">
+                                </span>
+                                <p class="yours">Your channel</p>
+                                <span class="profiletext">#uploadlogin.FullName#</span>
+                           <!---  </cfloop> --->
                         </div>
                         <div class="settwo">
                             <div class="listdta">
@@ -155,7 +160,7 @@
                                             <td class="tablevideopadding">
                                             </td>
                                             <td class="tablevideopadding">
-                                                <div class="uploadvisible">#uploadVideo.UploadDate#</div>
+                                                <div class="uploadvisible">#uploadVideo.DateOfPublishing#</div>
                                             </td>
                                             <td class="tablevideopadding">
                                             </td>

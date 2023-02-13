@@ -3,6 +3,7 @@ function validatesignup(){
     var email = document.getElementById('email');
     var phonenumber = document.getElementById('number');
     var role = document.getElementById('role');
+    var file = document.getElementById('file');
     var uname = document.getElementById('uname');
     var pswd = document.getElementById('pswd');
     var conpswd = document.getElementById('conpswd');
@@ -11,11 +12,12 @@ function validatesignup(){
     var validateemail = emailvalidate(email);
     var validatenumber = numbervalidate(phonenumber);
     var validaterole = rolevalidate(role);
+    var validatefile = filevalidate(file);
     var validateusername = usernamevalidate(uname);
     var validatepswd = pswdvalidate(pswd);
     var validateconpswd = conpswdvalidate(conpswd);
 
-    if(validatename && validateemail && validatenumber && validaterole && validateusername && validatepswd && validateconpswd){
+    if(validatename && validateemail && validatenumber && validaterole && validatefile && validateusername && validatepswd && validateconpswd){
         return true;
     }
     else{
@@ -81,6 +83,19 @@ function rolevalidate(role){
     else{
         successValidate('role_error');
         role.style.borderBottom="1px solid gainsboro";
+        return true;
+    }
+}
+
+function filevalidate(file){
+    if(file.value ==""){
+        errorValidate('file_error');
+        file.style.borderBottom="1px solid red";
+        return false;
+    }
+    else{
+        successValidate('file_error');
+        file.style.borderBottom="1px solid gainsboro";
         return true;
     }
 }
