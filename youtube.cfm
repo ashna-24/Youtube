@@ -141,9 +141,6 @@
                     </div>
                     <div class="youtubehome flex">
                         <cfloop query="uploadVideo">
-                            <!--- <cfinvoke method="getupload" component="components/upload" returnVariable="result"> --->
-                            <!--- <cfmediaplayer source="#expandpath(".\assets\uploadedfile\#session.uploadedfile#")#" width="200px" height="150px" name="myImage"> --->
-                            <!--- <cfdump var="#result#"> --->
                             <div class="video1">
                                 <span class="videoset">
                                     <video width="260px" controls height="150px" class="upvideo" id="upvideo" onclick="openFullscreen()">
@@ -156,10 +153,9 @@
                                         <cfset local.profileimage = uploadlogin.Profile>
                                         <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
                                     </span>
-                                   <div class="videodiv">
-                                            <h3 class="videoh3">#uploadVideo.Title#</h3><br>
-                                        </div>
-                                    <!--- #uploadVideo.Description# --->
+                                    <div class="videodiv">
+                                        <h3 class="videoh3">#uploadVideo.Title#</h3><br>
+                                    </div>
                                 </div>
                             </div>
                         </cfloop>

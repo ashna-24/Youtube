@@ -120,7 +120,6 @@
                                         <div class="videodiv">
                                             <h3 class="videoh3">#uploadVideo.Title#</h3><br>
                                         </div>
-                                        <!--- #uploadVideo.Description# --->
                                     </div>
                                 </div>
                             </cfloop>
