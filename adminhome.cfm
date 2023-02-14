@@ -124,7 +124,8 @@
                                             <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
                                         </span>
                                         <div class="videodiv">
-                                            <h3 class="videoh3">#uploadVideo.Title#</h3><br>
+                                            <h3 class="videoh3">#uploadVideo.Title#</h3>
+                                            <span class="dtlsupload">#uploadlogin.FullName#</span>
                                         </div>
                                     </div>
                                 </div>

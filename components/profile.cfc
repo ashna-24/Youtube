@@ -4,7 +4,7 @@
         <cfquery name="uploadlogin">
             SELECT FullName, Profile
             FROM signup
-           
+            
         </cfquery>
         <!--- <cfdump var="#uploadlogin#">
         <cfset local.profileQuery = structNew()>

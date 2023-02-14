@@ -613,6 +613,10 @@ input:focus{
     outline: none;
 }
 
+select:focus{
+    outline: none;
+}
+
 .filter{
     border: transparent;
     padding-top: 3px;
@@ -649,7 +653,7 @@ tr.conttr{
 }
 
 .checkbox{
-    column-width: 550px;
+    column-width: 800px;
     border-right: 2px solid rgb(231,231,231);
 }
 
@@ -850,7 +854,7 @@ tr.conttr{
 }
 
 .filtersearch{
-    z-index: -1;
+    z-index: 1;
     position: relative;
     user-select: none;
 }
@@ -881,6 +885,10 @@ tr.conttr{
 }
 
 .filterpopup{
+    padding: 10px 0px;
+}
+
+.filterdot{
     padding: 10px 0px;
 }
 
@@ -962,6 +970,7 @@ tr.conttr{
 
 .desupload{
     font-size: 13px;
+    padding-top: 5px;
     color: rgb(108,108,108); 
 }
 
@@ -988,6 +997,40 @@ tr.conttr{
     width: 42px;
     padding: 5px;
     border-radius: 25px;
+}
+
+.videotd{
+    position: relative;
+}
+
+.threedot{
+    position: absolute;
+    right: 5px;
+}
+
+.dot{
+    width: 30px;
+    padding: 5px;
+}
+
+.dot:hover{
+    border-radius: 20px;
+    background-color: rgb(242, 242, 242);
+}
+
+.dtlsupload{
+    font-size: 13px;
+    color: rgb(108,108,108); 
+    padding-left: 15px;
+}
+
+.filterdotselect{
+    width: 125px;
+    font-size: 13px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 25px 8px 25px;
+    border-color: rgb(242,242,242);
 }
 
 /* .displaytext{

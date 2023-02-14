@@ -65,7 +65,7 @@
                                 </span>
                                 <p class="yours">Your channel</p>
                                 <span class="profiletext">#uploadlogin.FullName#</span>
-                           <!---  </cfloop> --->
+                            <!--- </cfloop> --->
                         </div>
                         <div class="settwo">
                             <div class="listdta">
@@ -150,7 +150,15 @@
                                                     </div>
                                                     <div class="videouploadtitle">
                                                         <span class="titleupload">#uploadVideo.Title#</span><br>
-                                                        <span class="desupload">#uploadVideo.Description#</span>
+                                                        <p class="desupload">#uploadVideo.Description#</p>
+                                                    </div>
+                                                    <div class="threedot">
+                                                            <button class="filterdotselect" id="filterdot_#uploadVideo.ID#" style="visibility:hidden">
+                                                                <a href="components/delete.cfc?method=getdelete&ID=#uploadVideo.ID#" class="decoration">
+                                                                    Delete Video
+                                                                </a>
+                                                            </button>
+                                                        <img src="assets/more.png" alt="Not found" class="dot" onclick="dottext(#uploadVideo.ID#)">
                                                     </div>
                                                 </div>
                                             </td>

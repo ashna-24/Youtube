@@ -48,9 +48,7 @@
                             <input type="date" name="uploading" id="uploading" class="dateuploading videotitle">
                         </div>
                         <div class="selectfile">
-                            <a onclick="document.getElementById('uploadform').style.display='block'">
-                                <input type="submit" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer">
-                            </a>
+                            <input type="submit" name="videofile" id="videofile" value="SELECT FILES" class="videofile pointer">
                         </div>
                     </form>
                     <cfif structKeyExists(form, 'videofile')>
