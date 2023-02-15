@@ -113,9 +113,11 @@
                             <cfloop query="uploadVideo">
                                 <div class="video1">
                                     <span class="videoset">
-                                        <video width="260px" controls height="150px" class="upvideo" id="upvideo" onclick="openFullscreen()">
-                                            <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
-                                        </video>
+                                        <a href="view.cfm">
+                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo" onclick="openFullscreen()">
+                                                <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                            </video>
+                                        </a>
                                     </span>
                                     <div class="videodtls flex">
                                         <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">

@@ -1033,6 +1033,94 @@ tr.conttr{
     border-color: rgb(242,242,242);
 }
 
+.contview{
+    padding-top: 60px;
+}
+
+.viewvideo{
+    width: 860px;
+    margin: 15px 25px 20px 35px;
+}
+
+.videoviewh3{
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.videoviewdiv{
+    margin: 12px;
+}
+
+.dtlsviewupload{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.viewsub{
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.subscribe{
+    margin: 15px 0px 10px 15px;
+}
+
+.viewsub{
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    padding: 11px 19px;
+    border-radius: 22px;
+}
+
+.dtlslistupload{
+    font-size: 12px;
+    color: gray;
+    padding-top: 5px;
+}
+
+.viewsidebar{
+    margin-top: 30px; 
+}
+
+.viewvideolist{   
+    margin-top: 20px;
+}
+
+.uploadviewVideo{
+    margin-bottom: 10px;
+}
+
+.upview{
+    border-radius: 10px;
+}
+
+.videoviewdtls{
+    position: relative;
+}
+
+.viewlist{
+    margin-left: 10px;
+}
+
+.videoview{
+    font-size: 14px;
+}
+
+.viewlikeimg{
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: rgb(242,242,242);
+}
+
+.viewlike{
+    position: absolute;
+    right: 120px;
+    top: 20px;
+}
+
 /* .displaytext{
     position: relative;
     display: inline-block;
