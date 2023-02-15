@@ -39,6 +39,10 @@
                                     <div class="viewlike">
                                         <span>
                                             <img src="assets/like.png" alt="Not found" class="width viewlikeimg">
+                                            <img src="assets/dislike.png" alt="Not found" class="width viewlikeimg">
+                                        </span>
+                                        <span>
+                                            <img src="assets/share.png" alt="Not found" class="width viewlikeimg">
                                         </span>
                                     </div>
                                 </div>
