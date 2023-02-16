@@ -77,12 +77,15 @@
                                 </div>
                                     <cfinvoke  method="getcommentlist" component="components/comment" returnvariable="commentlist">
                                 <cfloop query="commentlist">
-                                <div class="">
+                                <div class="flex">
                                     <span class="videoimg">
                                         <cfset local.userimage = userpage.Profile>
                                         <img src="assets/file/#local.userimage#" name="myImage" class="videoimg">
                                     </span>
-                                        #commentlist.Comment#
+                                    <div class="commentdtls">
+                                        <p class="comtchannel">#userpage.FullName#</p>
+                                        <p class="comttxt">#commentlist.Comment#</p>
+                                    </div>
                                 </div>
                                 </cfloop>
                             </div>

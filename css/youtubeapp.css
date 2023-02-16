@@ -1211,6 +1211,20 @@ tr.conttr{
     border-color: rgb(108,108,108);
 }
 
+.commentdtls{
+    padding: 10px 15px;
+}
+
+.comtchannel{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.comttxt{
+    padding-top: 5px;
+    font-size: 13px;
+}
+
 /* .displaytext{
     position: relative;
     display: inline-block;
