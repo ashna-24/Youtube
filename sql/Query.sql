@@ -21,3 +21,8 @@ create table signup(ID int IDENTITY(101, 1) PRIMARY KEY,
 drop table signup;
 truncate table signup
 select * from signup
+
+create table comment(ID int IDENTITY(1, 1) PRIMARY KEY,
+					 Comment varchar(500));
+select * from comment
+drop table comment

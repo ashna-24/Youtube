@@ -923,16 +923,6 @@ tr.conttr{
     margin: 80px 0px 0px 20px;
 }
 
-.libletter{
-    width: 55px;
-    border: none;
-    border-radius: 60px;
-    font-size: 36px;
-    color: white;
-    padding: 20px 13px;
-    background-color: rgb(191,54,12);
-}
-
 .youtubehome{
     padding-top: 70px;
 }
@@ -996,7 +986,7 @@ tr.conttr{
 .videoimg{
     width: 42px;
     padding: 5px;
-    border-radius: 25px;
+    border-radius: 30px;
 }
 
 .videotd{
@@ -1110,15 +1100,115 @@ tr.conttr{
 }
 
 .viewlikeimg{
-    padding: 8px 15px;
+    padding: 4px 15px;
     border-radius: 20px;
     background-color: rgb(242,242,242);
 }
 
 .viewlike{
     position: absolute;
-    right: 120px;
-    top: 20px;
+    right: 0px;
+    bottom: 10px;
+}
+
+.viewshare{
+    margin-left: 20px;
+}
+
+.viewwidth{
+    width: 20px;
+    padding: 4px;
+}
+
+.viewtext{
+    padding: 6px 0px 0px 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(101,101,101);
+}
+
+.account{
+    margin-right: 10px;
+}
+
+.accountimg{
+    width: 35px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.libletter{
+    border-radius: 60px;
+    width: 110px;
+}
+
+.comtinput{
+    padding: 15px 0px 0px 15px;
+}
+
+.comttext{
+    padding: 6px 0px;
+    border-style: none none solid none;
+    border-width: thin;
+    width: 780px;
+    font-size: 14px;
+}
+
+.commentsubmit {
+    margin: 10px 0px 40px 0px;
+    position: relative;
+}
+
+.comtcancel{
+    position: absolute;
+    right: 110px;
+}
+
+.comtcncl:hover{
+    background-color: rgb(204, 204, 204);
+}
+
+.comtcncl{
+    width: 73px;
+    padding: 10px 15px;
+    border: none;
+    font-size: 13px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.comtcomment{
+    margin-left: 10px;
+    position: absolute;
+    right: 3px;
+}
+
+.comtcomt{
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(108,108,108);
+}
+
+.videouph3{
+    padding: 10px 15px 2px 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dtlsupupload{
+    font-size: 13px;
+    color: rgb(108,108,108); 
+    padding-left: 15px;
+}
+
+.viewimg{
+    padding-right: 15px;
+    border-style: none solid none none;
+    border-width: thin;
+    border-color: rgb(108,108,108);
 }
 
 /* .displaytext{

@@ -28,6 +28,6 @@
         <cfelse>
             <cfreturn "This record is already exists!">
         </cfif>
-        <cflocation url="upload.cfm">
+        <cflocation url="adminpage.cfm">
     </cffunction>
 </cfcomponent>

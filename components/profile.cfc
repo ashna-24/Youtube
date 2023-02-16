@@ -1,15 +1,10 @@
 <cfcomponent>
-    <cffunction name="getsignin" access="remote" <!--- returnType="struct" returnFormat="json" --->>
-       <!---  <cfargument name="Email" type="any" required="yes"> --->
+    <cffunction name="getsignin" access="remote">
         <cfquery name="uploadlogin">
-            SELECT FullName, Profile
-            FROM signup
-            
+            SELECT *
+            FROM signup  
+            WHERE LoginRole = 'Admin'          
         </cfquery>
-        <!--- <cfdump var="#uploadlogin#">
-        <cfset local.profileQuery = structNew()>
-        <cfset local.profileQuery.FullName = uploadlogin.FullName>
-        <cfset local.profileQuery.Profile = uploadlogin.Profile> --->
         <cfreturn uploadlogin>
     </cffunction>
 </cfcomponent>

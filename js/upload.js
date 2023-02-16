@@ -17,3 +17,8 @@ function dottext(id){
         filterdot.classList.toggle();
     }
 }
+
+function viewvideo(id){
+    var viewvideo = document.getElementById('upvideo_'+id);
+    viewvideo.style.display="block";
+}

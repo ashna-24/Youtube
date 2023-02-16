@@ -114,7 +114,11 @@
                     </div>
                     <div class="libside">
                         <div class="libletter">
-                            <span class="username">A</span>
+                            <cfinvoke method="getUser" component="components/user" returnvariable="userpage">
+                            <span>
+                                <cfset local.userimage = userpage.Profile>
+                                <img src="assets/file/#local.userimage#" name="myImage" class="libletter">
+                            </span>
                         </div>
                     </div>
                 </div>

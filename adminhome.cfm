@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
         <script src="js/videoupload.js"></script>
+        <script src="js/upload.js"></script>
         <title>YouTube</title> 
     </head>
     <body class="body">
@@ -113,8 +114,8 @@
                             <cfloop query="uploadVideo">
                                 <div class="video1">
                                     <span class="videoset">
-                                        <a href="view.cfm">
-                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo" onclick="openFullscreen()">
+                                        <a href="view.cfm" onclick="viewvideo(#uploadVideo.ID#)">
+                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
                                                 <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
                                             </video>
                                         </a>

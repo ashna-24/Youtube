@@ -58,17 +58,17 @@
                         <a href="subscriptions.cfm" class="link"><div class="home subscriptions flex padding pointer">
                             <img src="assets/subscriptions.png" alt="Not found" class="width">
                             <span class="text">Subscriptions</span>
-                        </div>
+                        </div></a>
                     </div>
                     <div class="set">
                         <a href="library.cfm" class="link"><div class="home library flex padding pointer">
                             <img src="assets/videolibrary.png" alt="Not found" class="width">
                             <span class="text">Library</span>
-                        </div>
+                        </div></a>
                         <a href="history.cfm" class="link"><div class="home history flex padding pointer">
                             <img src="assets/history.png" alt="Not found" class="width">
                             <span class="text">History</span>
-                        </div>
+                        </div></a>
                     </div>
                     <div class="set">
                         <p class="text align">Sign in to like videos,<br>comment, and subscribe.</p>
@@ -140,27 +140,29 @@
                         </div>
                     </div>
                     <div class="youtubehome flex">
-                        <cfloop query="uploadVideo">
-                            <div class="video1">
-                                <span class="videoset">
-                                    <video width="260px" controls height="150px" class="upvideo" id="upvideo" onclick="openFullscreen()">
-                                        <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
-                                    </video>
-                                </span>
-                                <div class="videodtls flex">
-                                    <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
-                                    <span class="videoimg">
-                                        <cfset local.profileimage = uploadlogin.Profile>
-                                        <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
+                            <cfloop query="uploadVideo">
+                                <div class="video1">
+                                    <span class="videoset">
+                                        <a href="view.cfm" onclick="viewvideo(#uploadVideo.ID#)">
+                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
+                                                <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                            </video>
+                                        </a>
                                     </span>
-                                    <div class="videodiv">
-                                        <h3 class="videoh3">#uploadVideo.Title#</h3>
-                                        <span class="dtlsupload">#uploadlogin.FullName#</span>
+                                    <div class="videodtls flex">
+                                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
+                                        <span class="videoimg">
+                                            <cfset local.profileimage = uploadlogin.Profile>
+                                            <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
+                                        </span>
+                                        <div class="videodiv">
+                                            <p class="videouph3">#uploadVideo.Title#</h3>
+                                            <p class="dtlsupupload">#uploadlogin.FullName#</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </cfloop>
-                    </div>
+                            </cfloop>
+                        </div>
                 </div>
             </div>
         </cfoutput>
