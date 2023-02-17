@@ -58,14 +58,10 @@
                     <div class="adminsidebar">
                         <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
                         <div class="setone">
-                            <!--- <cfloop query="uploadlogin"> --->
-                                <span class="viewimg">
-                                    <cfset local.profileimage = uploadlogin.Profile>
-                                    <img src="assets/file/#local.profileimage#" name="myImage" class="userImg">
-                                </span>
-                                <p class="yours">Your channel</p>
-                                <span class="profiletext">#uploadlogin.FullName#</span>
-                            <!--- </cfloop> --->
+                            <cfset local.profileimage = uploadlogin.Profile>
+                            <img src="assets/file/#local.profileimage#" name="myImage" class="userImg">
+                            <p class="yours">Your channel</p>
+                            <span class="profiletext">#uploadlogin.FullName#</span>
                         </div>
                         <div class="settwo">
                             <div class="listdta">

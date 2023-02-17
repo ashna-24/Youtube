@@ -26,4 +26,13 @@
         </cfquery>
         <cfreturn commentlist>
     </cffunction>
+
+    <cffunction  name="getcountcomt" access="remote" returnType="query">
+        <cfquery name="countQuery">
+            SELECT COUNT(*) 
+            AS CommentCount
+            FROM comment
+        </cfquery>
+        <cfreturn countQuery>
+    </cffunction>
 </cfcomponent>

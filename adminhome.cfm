@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
         <script src="js/videoupload.js"></script>
+        <script src="js/updatesub.js"></script>
         <script src="js/upload.js"></script>
         <title>YouTube</title> 
     </head>

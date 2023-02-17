@@ -1046,14 +1046,25 @@ tr.conttr{
     font-weight: bold;
 }
 
-.viewsub{
+.viewunsub{
     border: none;
-    background-color: black;
+    background-color: rgb(101,101,101);
     color: white;
+    font-size: 13px;
+    padding: 12px;
+    border-radius: 22px;
 }
 
 .subscribe{
     margin: 15px 0px 10px 15px;
+    position: relative;
+}
+
+.clicksub{
+    border: none;
+    width: 15px;
+    font-size: 12px;
+    color: gray;
 }
 
 .viewsub{
@@ -1204,13 +1215,6 @@ tr.conttr{
     padding-left: 15px;
 }
 
-.viewimg{
-    padding-right: 15px;
-    border-style: none solid none none;
-    border-width: thin;
-    border-color: rgb(108,108,108);
-}
-
 .commentdtls{
     padding: 10px 15px;
 }
@@ -1223,6 +1227,20 @@ tr.conttr{
 .comttxt{
     padding-top: 5px;
     font-size: 13px;
+}
+
+.comtdiv{
+    margin-bottom: 10px; 
+}
+
+.viewcomttop{
+    margin: 20px 0px 20px 10px;
+}
+
+.hidden{
+    display: block;
+    position: absolute;
+    top: 0px;
 }
 
 /* .displaytext{

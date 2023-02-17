@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
+        <script src="js/upload.js"></script>
+        <script src="js/updatesub.js"></script>
+        <script src="js/unsubscribe.js"></script>
+        <script src="js/updatecount.js"></script>
+        <script src="assets/jQuery.js"></script>
+        <script src="assets/jQuerymin.js"></script>
         <title>YouTube</title> 
     </head>
     <body class="body">
@@ -31,10 +37,12 @@
                                     </span>
                                     <div class="videoviewdiv">
                                         <span class="dtlsviewupload">#uploadlogin.FullName#</span><br>
-                                        <p class="dtlslistupload">subscribers</p>
+                                        <p class="dtlslistupload"><input type="text" id="clicksub" class="clicksub" value=""> subscribers</p>
                                     </div>
+                                    <input type="hidden" id="contactId" name="contactId" value="">
                                     <div class="subscribe">
-                                        <button name="subscribe" id="subscribe" class="viewsub pointer">Subscribe</button>
+                                        <button name="subscribe" id="subscribe" onclick="updatecount('#uploadVideo.Title#'); updatesubscribers()<!--- ; unclick() --->" class="viewsub pointer">Subscribe</button>
+                                        <button name="subscribe" id="unsubscribe" onclick="updatecount('#uploadVideo.Title#'); unsubscribe()<!--- ; click() --->" class="viewunsub pointer">Unsubscribe</button>
                                     </div>
                                     <div class="viewlike flex">
                                         <div class="viewlikeimg pointer">
@@ -49,7 +57,9 @@
                                 </div>
                             </div>
                             <div class="viewcomments">
+                                <cfinvoke method="getcountcomt" component="components/comment" returnVariable="countQuery">
                                 <div class="viewcomttop">
+                                    <p>#countQuery.CommentCount# Comments</p>
                                 </div>
                                 <div class="viewcomt flex">
                                     <cfinvoke method="getUser" component="components/user" returnvariable="userpage">
@@ -77,7 +87,7 @@
                                 </div>
                                     <cfinvoke  method="getcommentlist" component="components/comment" returnvariable="commentlist">
                                 <cfloop query="commentlist">
-                                <div class="flex">
+                                <div class="flex comtdiv">
                                     <span class="videoimg">
                                         <cfset local.userimage = userpage.Profile>
                                         <img src="assets/file/#local.userimage#" name="myImage" class="videoimg">
