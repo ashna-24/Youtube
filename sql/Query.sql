@@ -9,6 +9,7 @@ create table uploaddata(ID int identity(1,1) primary key,
 select * from uploaddata
 truncate table uploaddata
 drop table uploaddata
+
 create table signup(ID int IDENTITY(101, 1) PRIMARY KEY,
 					FullName varchar(20),
 					Email varchar(40),
@@ -26,3 +27,9 @@ create table comment(ID int IDENTITY(1, 1) PRIMARY KEY,
 					 Comment varchar(500));
 select * from comment
 drop table comment
+
+SELECT COUNT(comment)as CommentCount FROM comment;
+
+ALTER TABLE uploaddata
+ADD Subscribers int default '20';
+

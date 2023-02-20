@@ -1051,7 +1051,7 @@ tr.conttr{
     background-color: rgb(101,101,101);
     color: white;
     font-size: 13px;
-    padding: 12px;
+    padding: 11px;
     border-radius: 22px;
 }
 
@@ -1060,11 +1060,23 @@ tr.conttr{
     position: relative;
 }
 
+.clickcomt{
+    border: none;
+    width: 15px;
+    font-size: 12px;
+    color: gray;
+    background-color: rgb(242,242,242);
+}
+
 .clicksub{
     border: none;
     width: 15px;
     font-size: 12px;
     color: gray;
+}
+
+.dislike{
+    padding-left: 10px;
 }
 
 .viewsub{
@@ -1135,6 +1147,15 @@ tr.conttr{
     padding: 6px 0px 0px 4px;
     font-size: 13px;
     font-weight: bold;
+    color: rgb(101,101,101);
+}
+
+.viewlikevdo{
+    padding: 6px 10px 0px 4px;
+    font-size: 13px;
+    font-weight: bold;
+    border-style: none solid none none;
+    border-width: thin;
     color: rgb(101,101,101);
 }
 
@@ -1217,6 +1238,26 @@ tr.conttr{
 
 .commentdtls{
     padding: 10px 15px;
+    width: 600px;
+}
+
+.comtdot{
+    width: 18px;
+    padding: 6px;
+    margin-top: 5px;
+}
+
+.comtdot:hover{
+    border-radius: 20px;
+    background-color: rgb(242, 242, 242);
+}
+
+.deltcolor{
+    color: black;
+}
+
+.viewcomt{
+    margin-bottom: 15px;
 }
 
 .comtchannel{

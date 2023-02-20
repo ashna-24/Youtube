@@ -13,7 +13,7 @@
     <body class="body">
         <cfoutput>
             <cfif structKeyExists(session, 'adminflag')>
-                <cfinclude  template="header.cfm">
+                <cfinclude  template="adminheader.cfm">
                 <div class="mainbody flex">
                     <div class="sidebar sidescroll">
                         <div class="set">
@@ -115,7 +115,7 @@
                             <cfloop query="uploadVideo">
                                 <div class="video1">
                                     <span class="videoset">
-                                        <a href="view.cfm" onclick="viewvideo(#uploadVideo.ID#)">
+                                        <a href="adminview.cfm" onclick="viewvideo(#uploadVideo.ID#)">
                                             <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
                                                 <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
                                             </video>

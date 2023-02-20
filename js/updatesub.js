@@ -10,7 +10,7 @@ function updatesubscribers(message){
             datatype: 'json'
         },
         success: function(){
-            alert("Successfully Subscribed");
+            alert("Subscription Added");
         }
     })
 }

@@ -16,7 +16,7 @@
         <cfelse>
             <cfreturn "This record is already exists!">
         </cfif>
-        <cflocation url="view.cfm">
+        <!--- <cflocation url="view.cfm"> --->
     </cffunction>
 
     <cffunction  name="getcommentlist" access="remote">

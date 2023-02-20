@@ -15,7 +15,7 @@
     </head>
     <body class="body">
         <cfoutput>
-            <cfinclude  template="header.cfm">
+            <cfinclude template="adminheader.cfm">
             <div class="contview">
                 <div class="flex">
                     <div class="viewvideo">
@@ -36,7 +36,7 @@
                                 </span>
                                 <div class="videoviewdiv">
                                     <span class="dtlsviewupload">#uploadlogin.FullName#</span><br>
-                                    <p class="dtlslistupload"><input type="text" id="clicksub" class="clicksub" value="" onclick="components/unsubscribe.cfc?method=getUpdateunsub&sub=#uploadVideo.Subscribers#"> subscribers</p>
+                                    <p class="dtlslistupload"><input type="text" id="clicksub" class="clicksub" value=""> subscribers</p>
                                 </div>
                                 <input type="hidden" id="contactId" name="contactId" value="">
                                 <div class="subscribe">
@@ -45,12 +45,8 @@
                                 </div>
                                 <div class="viewlike flex">
                                     <div class="viewlikeimg pointer">
-                                        <div class="flex">
-                                            <img src="assets/like.png" alt="Not found" class="width viewimg" id="liked" onclick="likedvideo()">
-                                            <input type="text" id="clicksub" class="clickcomt" value="">
-                                            <p class="viewlikevdo">Likes</p>
-                                            <img src="assets/dislike.png" alt="Not found" class="dislike width">
-                                        </div>
+                                        <img src="assets/like.png" alt="Not found" class="width viewimg">
+                                        <img src="assets/dislike.png" alt="Not found" class="width">
                                     </div>
                                     <div class="viewlikeimg pointer viewshare flex">
                                         <img src="assets/share.png" alt="Not found" class="viewwidth">
@@ -64,11 +60,10 @@
                             <div class="viewcomttop">
                                 <p>#countQuery.CommentCount# Comments</p>
                             </div>
-                            <div class="viewcomt flex">
-                                <cfinvoke method="getUser" component="components/user" returnvariable="userpage">
+                            <cfinvoke method="getUser" component="components/user" returnvariable="userpage">
+                            <!--- <div class="viewcomt flex">
                                 <span class="videoimg">
-                                    <cfset local.userimage = userpage.Profile>
-                                    <img src="assets/file/#local.userimage#" name="myImage" class="videoimg">
+                                    <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
                                 </span>
                                 <div class="comtinput">
                                     <form method="post" autocomplete="off">
@@ -83,20 +78,29 @@
                                         </div>
                                     </form>
                                     <cfif structKeyExists(form, 'comment')>
-                                        <cfinvoke  method="getcomment" component="components/comment">
+                                        <cfinvoke method="getcomment" component="components/comment">
                                         <cfset structClear(form)>
                                     </cfif>
                                 </div>
-                            </div>
-                                <cfinvoke  method="getcommentlist" component="components/comment" returnvariable="commentlist">
+                            </div> --->
+                            <cfinvoke  method="getcommentlist" component="components/comment" returnvariable="commentlist">
                             <cfloop query="commentlist">
                                 <div class="flex comtdiv">
                                     <span class="videoimg">
+                                        <cfset local.userimage = userpage.Profile>
                                         <img src="assets/file/#local.userimage#" name="myImage" class="videoimg">
                                     </span>
                                     <div class="commentdtls">
                                         <p class="comtchannel">#userpage.FullName#</p>
                                         <p class="comttxt">#commentlist.Comment#</p>
+                                    </div>
+                                    <div class="comtthreedot">
+                                        <button class="filterdotselect" id="filterdot_#commentlist.ID#" style="visibility:hidden">
+                                            <a href="components/deletecomment.cfc?method=getdeletecomt&ID=#commentlist.ID#" class="deltcolor decoration">
+                                                Delete
+                                            </a>
+                                        </button>
+                                        <img src="assets/more.png" alt="Not found" class="comtdot" onclick="dottext(#commentlist.ID#)">
                                     </div>
                                 </div>
                             </cfloop>

@@ -1,4 +1,4 @@
-function adminProfile(message){
+/* function adminProfile(message){
     $.ajax({
         url:'components/profile.cfc?method=getsignin',
         type:'post',
@@ -9,8 +9,8 @@ function adminProfile(message){
         },
         success:function(data){
             console.log(data);
-           /*  var obj = JSON.parse(data);
-            $('#viewid').html(obj.FIRSTNAME); */
+            var obj = JSON.parse(data);
+            $('#viewid').html(obj.FIRSTNAME); 
         }
     });
-}
+} */

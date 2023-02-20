@@ -10,7 +10,7 @@ function unsubscribe(message){
             datatype: 'json'
         },
         success: function(){
-            alert("Successfully Unsubscribed");
+            alert("Subscriptions Removed");
         }
     })
 }
