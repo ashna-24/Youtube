@@ -8,9 +8,6 @@ function unsubscribe(message){
             contactid: $('#contactId').val(),
             title: $('#clicksub').val(),
             datatype: 'json'
-        },
-        success: function(){
-            alert("Subscriptions Removed");
         }
     })
 }

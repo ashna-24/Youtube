@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
         <script src="js/upload.js"></script>
+        <script src="js/updatelike.js"></script>
+        <script src="js/updatelikecount.js"></script>
+        <script src="js/likedvideo.js"></script>
+        <script src="js/dislikes.js"></script>
         <script src="js/updatesub.js"></script>
         <script src="js/unsubscribe.js"></script>
         <script src="js/updatecount.js"></script>
@@ -36,7 +40,10 @@
                                 </span>
                                 <div class="videoviewdiv">
                                     <span class="dtlsviewupload">#uploadlogin.FullName#</span><br>
-                                    <p class="dtlslistupload"><input type="text" id="clicksub" class="clicksub" value="" onclick="components/unsubscribe.cfc?method=getUpdateunsub&sub=#uploadVideo.Subscribers#"> subscribers</p>
+                                    <p class="dtlslistupload">
+                                        <input type="text" id="clicksub" class="clicksub" value="">
+                                        subscribers
+                                    </p>
                                 </div>
                                 <input type="hidden" id="contactId" name="contactId" value="">
                                 <div class="subscribe">
@@ -46,10 +53,10 @@
                                 <div class="viewlike flex">
                                     <div class="viewlikeimg pointer">
                                         <div class="flex">
-                                            <img src="assets/like.png" alt="Not found" class="width viewimg" id="liked" onclick="likedvideo()">
-                                            <input type="text" id="clicksub" class="clickcomt" value="">
+                                            <img src="assets/like.png" alt="Not found" class="width viewimg" id="liked" onclick="likedvideo(); updatelikecount('#uploadVideo.Title#'); updatelikes()">
+                                            <input type="text" id="clicklike" class="clickcomt" value="">
                                             <p class="viewlikevdo">Likes</p>
-                                            <img src="assets/dislike.png" alt="Not found" class="dislike width">
+                                            <img src="assets/dislike.png" alt="Not found" class="dislike width" id="disliked" onclick="dislikedvideo(); updatelikecount('#uploadVideo.Title#'); dislikes()">
                                         </div>
                                     </div>
                                     <div class="viewlikeimg pointer viewshare flex">
@@ -88,7 +95,7 @@
                                     </cfif>
                                 </div>
                             </div>
-                                <cfinvoke  method="getcommentlist" component="components/comment" returnvariable="commentlist">
+                            <cfinvoke  method="getcommentlist" component="components/comment" returnvariable="commentlist">
                             <cfloop query="commentlist">
                                 <div class="flex comtdiv">
                                     <span class="videoimg">
@@ -97,6 +104,17 @@
                                     <div class="commentdtls">
                                         <p class="comtchannel">#userpage.FullName#</p>
                                         <p class="comttxt">#commentlist.Comment#</p>
+                                    </div>
+                                    <div class="comtthreedot">
+                                        <button class="filterdotselect" id="filterdot_#commentlist.ID#" style="visibility:hidden">
+                                            <a href="<!--- components/deletecomment.cfc?method=getdeletecomt&ID=#commentlist.ID# --->" class="deltcolor decoration">
+                                                <p class="edit">Edit</p>
+                                            </a>
+                                            <a href="components/deletecomment.cfc?method=getdeletecomt&ID=#commentlist.ID#" class="deltcolor decoration">
+                                                <p class="edit">Delete</p>
+                                            </a>
+                                        </button>
+                                        <img src="assets/more.png" alt="Not found" class="comtdot" onclick="dottext(#commentlist.ID#)">
                                     </div>
                                 </div>
                             </cfloop>
@@ -131,6 +149,7 @@
                                     </span>
                                     <div class="viewlist">
                                         <h3 class="videoview">#uploadVideo.Title#</h3>
+                                        <p class="viewside">#uploadlogin.FullName#</p>
                                     </div>
                                 </div>
                             </cfloop>

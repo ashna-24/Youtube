@@ -23,10 +23,11 @@ function viewvideo(id){
     viewvideo.style.display="block";
 }
 
+/* 
 function unclick(){
     var unsubscribe = document.getElementById('unsubscribe');
     unsubscribe.style.display="block";
-}
+} */
 
 /* function click(){
     var subscribe = document.getElementById('subscribe');

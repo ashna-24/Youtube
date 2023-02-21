@@ -135,6 +135,7 @@
                                         </td>
                                     </tr>
                                     <cfloop query="uploadVideo">
+                                        <cfinvoke method="getcountcomt" component="components/comment" returnVariable="countQuery">
                                         <tr class="conttr">
                                             <td class="tablevideopadding checkbox pointer">
                                                 <div class="videotd flex">
@@ -167,6 +168,12 @@
                                                 <div class="uploadvisible">#uploadVideo.DateOfPublishing#</div>
                                             </td>
                                             <td class="tablevideopadding">
+                                            </td>
+                                            <td class="tablevideopadding">
+                                                <div class="uploadvisible">#countQuery.CommentCount#</div>
+                                            </td>
+                                            <td class="tablevideopadding">
+                                                <div class="uploadvisible">#uploadVideo.Likes#</div>
                                             </td>
                                         </tr>
                                     </cfloop>

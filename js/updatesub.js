@@ -8,9 +8,6 @@ function updatesubscribers(message){
             contactid: $('#contactId').val(),
             title: $('#clicksub').val(),
             datatype: 'json'
-        },
-        success: function(){
-            alert("Subscription Added");
         }
     })
 }

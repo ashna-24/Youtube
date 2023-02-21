@@ -33,3 +33,6 @@ SELECT COUNT(comment)as CommentCount FROM comment;
 ALTER TABLE uploaddata
 ADD Subscribers int default '20';
 
+ALTER TABLE uploaddata
+ADD Likes int default '20';
+

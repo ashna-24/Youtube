@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
         <script src="js/upload.js"></script>
+        <script src="js/updatelike.js"></script>
+        <script src="js/updatelikecount.js"></script>
+        <script src="js/likedvideo.js"></script>
+        <script src="js/dislikes.js"></script>
         <script src="js/updatesub.js"></script>
         <script src="js/unsubscribe.js"></script>
         <script src="js/updatecount.js"></script>
@@ -24,7 +28,6 @@
                             <span class="videoset">
                                 <video width="860px" controls muted height="500px" class="upviewvideo" id="upvideo" onclick="openFullscreen()">
                                     <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
-                                    <track src="video.en.vtt" kind="subtitles" label="English Subtitles" srclang="en">
                                 </video>
                             </span>
                             <h3 class="videoviewh3">#uploadVideo.Title#</h3>
@@ -45,8 +48,12 @@
                                 </div>
                                 <div class="viewlike flex">
                                     <div class="viewlikeimg pointer">
-                                        <img src="assets/like.png" alt="Not found" class="width viewimg">
-                                        <img src="assets/dislike.png" alt="Not found" class="width">
+                                        <div class="flex">
+                                            <img src="assets/like.png" alt="Not found" class="width viewimg" id="liked" onclick="likedvideo(); updatelikecount('#uploadVideo.Title#'); updatelikes()">
+                                            <input type="text" id="clicklike" class="clickcomt" value="">
+                                            <p class="viewlikevdo">Likes</p>
+                                            <img src="assets/dislike.png" alt="Not found" class="dislike width" id="disliked" onclick="dislikedvideo(); updatelikecount('#uploadVideo.Title#'); dislikes()">
+                                        </div>
                                     </div>
                                     <div class="viewlikeimg pointer viewshare flex">
                                         <img src="assets/share.png" alt="Not found" class="viewwidth">
@@ -135,6 +142,7 @@
                                     </span>
                                     <div class="viewlist">
                                         <h3 class="videoview">#uploadVideo.Title#</h3>
+                                        <p class="viewside">#uploadlogin.FullName#</p>
                                     </div>
                                 </div>
                             </cfloop>

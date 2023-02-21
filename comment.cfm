@@ -60,14 +60,12 @@
                     <div class="adminsidebar">
                         <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
                         <div class="setone">
-                            <!--- <cfloop query="uploadlogin"> --->
-                                <span class="viewimg">
-                                    <cfset local.profileimage = uploadlogin.Profile>
-                                    <img src="assets/file/#local.profileimage#" name="myImage" class="userImg">
-                                </span>
-                                <p class="yours">Your channel</p>
-                                <span class="profiletext">#uploadlogin.FullName#</span>
-                        <!---  </cfloop> --->
+                            <span class="viewimg">
+                                <cfset local.profileimage = uploadlogin.Profile>
+                                <img src="assets/file/#local.profileimage#" name="myImage" class="userImg">
+                            </span>
+                            <p class="yours">Your channel</p>
+                            <span class="profiletext">#uploadlogin.FullName#</span>
                         </div>
                         <div class="settwo">
                             <div class="listdta">
@@ -84,6 +82,53 @@
                                     <span class="textsize">Subtitles</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="admincontent">
+                        <div class="textcontent">
+                            <div class="headertext">
+                                <h3>Channel comments</h3>
+                            </div>
+                            <div class="selectedhead">
+                                <div class="videoscomments pointer">
+                                    <span class="listvideos">Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filterset flex">
+                            <div class="filterimg pointer">
+                                <img src="assets/filter.png" alt="Not found" class="setimg">
+                            </div>
+                            <div>
+                                <input type="search" placeholder="Filter" name="fitler" id="filter" class="filter">
+                            </div>
+                        </div>
+                        <div class="comtsetthree">
+                            <cfinvoke method="getUser" component="components/user" returnvariable="userpage">
+                            <cfset local.userimage = userpage.Profile>
+                            <cfinvoke  method="getcommentlist" component="components/comment" returnvariable="commentlist">
+                            <cfloop query="commentlist">
+                                <div class="flex comtsetdiv">
+                                    <span class="videoimg">
+                                        <img src="assets/file/#local.userimage#" name="myImage" class="videoimg">
+                                    </span>
+                                    <div class="commentdtls">
+                                        <p class="comtchannel">#userpage.FullName#</p>
+                                        <p class="comttxt">#commentlist.Comment#</p>
+                                    </div>
+                                    <div class="comtthreedot">
+                                        <button class="filterdotselect" id="filterdot_#commentlist.ID#" style="visibility:hidden">
+                                            <a href="<!--- components/deletecomment.cfc?method=getdeletecomt&ID=#commentlist.ID# --->" class="deltcolor decoration">
+                                                <p class="edit">Edit</p>
+                                            </a>
+                                            <a href="components/deletecomment.cfc?method=getdeletecomt&ID=#commentlist.ID#" class="deltcolor decoration">
+                                                <p class="edit">Delete</p>
+                                            </a>
+                                        </button>
+                                        <img src="assets/more.png" alt="Not found" class="comtdot" onclick="dottext(#commentlist.ID#)">
+                                    </div>
+                                </div>
+                            </cfloop>
                         </div>
                     </div>
                 </div>
