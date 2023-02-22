@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
-        <script src="js/view.js"></script>
-        <title>Subscriptions-YouTube</title> 
+        <title>Like videos-YouTube</title> 
     </head>
     <body>
         <cfoutput>
@@ -18,8 +17,8 @@
                             <img src="assets/homefill.png" alt="Not found" class="width">
                             <span class="text">Home</span>
                         </div></a>
-                        <a href="subscriptions.cfm" class="link"><div class="home subscriptions selected flex padding pointer">
-                            <img src="assets/subscribe.png" alt="Not found" class="width">
+                        <a href="subscriptions.cfm" class="link"><div class="home subscriptions flex padding pointer">
+                            <img src="assets/subscriptions.png" alt="Not found" class="width">
                             <span class="text">Subscriptions</span>
                         </div></a>
                     </div>
@@ -77,67 +76,77 @@
                     </div>
                 </div>
                 <div class="content">
-                    <div class="subset1">
-                        <p class="subpara">Entertainment</p>
-                        <div class="subdiv">
-                                <div class="subcribeset">
-                                    <a href="Channel.cfm" class="link">
-                                        <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
-                                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
-                                        <div class="videosubimg">
-                                            <cfset local.profileimage = uploadlogin.Profile>
-                                            <img src="assets/file/#local.profileimage#" name="myImage" class="subimg">
-                                        </div>
-                                        <p class="subdtlsupload">#uploadlogin.FullName#</p>
-                                        <p class="subcount">#uploadVideo.Subscribers# subscribers</p>
-                                    </a>
-                                    <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
-                                </div>
+                    <div class="channelbg">
+                        <img src="assets/desktop.jpg" alt="Not found" class="bgimg">
+                    </div>
+                    <div class="channeldtls flex">
+                        <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
+                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
+                        <div class="channelsubimg">
+                            <cfset local.profileimage = uploadlogin.Profile>
+                            <img src="assets/file/#local.profileimage#" name="myImage" class="chnlimg">
+                        </div>
+                        <div class="dtlschannel">
+                            <p class="chnldtlsupload">#uploadlogin.FullName#</p>
+                            <p class="chnl">#uploadlogin.Email#</p>
+                            <p class="chnl">#uploadVideo.Subscribers# subscribers</p>
                         </div>
                     </div>
-                    <div class="subset1 subset2">
-                        <p class="subpara">Music</p>
-                        <div class="subdiv flex">
-                            <div class="subcribeset">
-                                <div class="videosubimg">
-                                    <img src="assets/justin.jpg" name="myImage" class="subimg">
+                    <div class="chnlcont">
+                        <div class="contchnldtls flex">
+                            <a href="Channel.cfm" class="decoration">
+                                <div class="channelhome chnlhome pointer">
+                                    <p class="chnlhme">HOME</p>
                                 </div>
-                                <p class="subdtlsupload">Justin Bieber</p>
-                                <p class="subcount">71M subscribers</p>
-                                <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
-                            </div>
-                            <div class="subcribeset">
-                                <div class="videosubimg">
-                                    <img src="assets/chris.jpg" name="myImage" class="subimg">
+                            </a>
+                            <a href="videos.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme chnlselected">VIDEOS</p>
                                 </div>
-                                <p class="subdtlsupload">Chris Brown</p>
-                                <p class="subcount">24.7M subscribers</p>
-                                <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
-                            </div>
-                            <div class="subcribeset">
-                                <div class="videosubimg">
-                                    <img src="assets/rahman.jpg" name="myImage" class="subimg">
+                            </a>
+                            <a href="shorts.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">SHORTS</p>
                                 </div>
-                                <p class="subdtlsupload">A R Rahman</p>
-                                <p class="subcount">3.27M subscribers</p>
-                                <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
-                            </div>
-                            <div class="subcribeset">
-                                <div class="videosubimg">
-                                    <img src="assets/spb.jpg" name="myImage" class="subimg">
+                            </a>
+                            <a href="playlists.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">PLAYLISTS</p>
                                 </div>
-                                <p class="subdtlsupload">S P B</p>
-                                <p class="subcount">798k subscribers</p>
-                                <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
-                            </div>
-                            <div class="subcribeset">
-                                <div class="videosubimg">
-                                    <img src="assets/chithra.jpg" name="myImage" class="subimg">
+                            </a>
+                            <a href="community.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">COMMUNITY</p>
                                 </div>
-                                <p class="subdtlsupload">K S Chithra</p>
-                                <p class="subcount">517k subscribers</p>
-                                <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
-                            </div>
+                            </a>
+                            <a href="details.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">CHANNELS</p>
+                                </div>
+                            </a>
+                            <a href="about.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">ABOUT</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="chnlvideos flex">
+                            <cfloop query="uploadVideo">
+                                <div class="video1">
+                                    <span class="videoset">
+                                        <a href="adminview.cfm" onclick="viewvideo(#uploadVideo.ID#)">
+                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
+                                                <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                            </video>
+                                        </a>
+                                    </span>
+                                    <div class="videodtls flex">
+                                        <div class="videodiv">
+                                            <p class="chnlh3">#uploadVideo.Title#</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </cfloop>
                         </div>
                     </div>
                 </div>

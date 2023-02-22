@@ -80,7 +80,7 @@
                         </button>
                     </div>
                     <div class="set">
-                        <div class="title">Explore</div>
+                        <div class="title">Subscriptions</div>
                         <div class="home flex padding pointer">
                             <img src="assets/musicpage.jpg" alt="Not found" class="width sub">
                             <span class="text">Music</span>

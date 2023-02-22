@@ -53,13 +53,6 @@
                         <div class="set">
                             <div class="title">Subscriptions</div>
                             <div class="home flex padding pointer">
-                                <img src="" alt="Not found" class="width">
-                                <span class="text"></span>
-                            </div>
-                        </div>
-                        <div class="set">
-                            <div class="title">Explore</div>
-                            <div class="home flex padding pointer">
                                 <img src="assets/musicpage.jpg" alt="Not found" class="width sub">
                                 <span class="text">Music</span>
                             </div>
@@ -116,7 +109,7 @@
                                 <div class="video1">
                                     <span class="videoset">
                                         <a href="adminview.cfm" onclick="viewvideo(#uploadVideo.ID#)">
-                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#"">
+                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
                                                 <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
                                             </video>
                                         </a>

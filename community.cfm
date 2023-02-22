@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
-        <title>YouTube</title> 
+        <title>Like videos-YouTube</title> 
     </head>
     <body>
         <cfoutput>
@@ -27,8 +27,8 @@
                             <img src="assets/videolibrary.png" alt="Not found" class="width">
                             <span class="text">Library</span>
                         </div></a>
-                        <a href="history.cfm" class="link"><div class="home history selected flex padding pointer">
-                            <img src="assets/timemachine.png" alt="Not found" class="width">
+                        <a href="history.cfm" class="link"><div class="home history flex padding pointer">
+                            <img src="assets/history.png" alt="Not found" class="width">
                             <span class="text">History</span>
                         </div></a>
                         <a href="watchlater.cfm" class="link"><div class="home watch flex padding pointer">
@@ -76,47 +76,62 @@
                     </div>
                 </div>
                 <div class="content">
-                    <div class="historycont flex">
-                        <div class="historylist">
-                            <h6 class="watchhistory">Watch history</h6>
+                    <div class="channelbg">
+                        <img src="assets/desktop.jpg" alt="Not found" class="bgimg">
+                    </div>
+                    <div class="channeldtls flex">
+                        <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
+                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
+                        <div class="channelsubimg">
+                            <cfset local.profileimage = uploadlogin.Profile>
+                            <img src="assets/file/#local.profileimage#" name="myImage" class="chnlimg">
                         </div>
-                        <div class="historyselect">
-                            <p class="typehistory">History Type</p>
-                            <div class="selecttype">
-                                <div class="choose flex pointer">
-                                    Watch history
-                                    <input type="radio" name="radiobtn" id="radiobtn" class="radiobtn watched" checked><br>
+                        <div class="dtlschannel">
+                            <p class="chnldtlsupload">#uploadlogin.FullName#</p>
+                            <p class="chnl">#uploadlogin.Email#</p>
+                            <p class="chnl">#uploadVideo.Subscribers# subscribers</p>
+                        </div>
+                    </div>
+                    <div class="chnlcont">
+                        <div class="contchnldtls flex">
+                            <a href="Channel.cfm" class="decoration">
+                                <div class="channelhome chnlhome pointer">
+                                    <p class="chnlhme">HOME</p>
                                 </div>
-                                <div class="choose flex pointer">
-                                    Community
-                                    <input type="radio" name="radio" id="radio" class="radiobtn community">
+                            </a>
+                            <a href="videos.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">VIDEOS</p>
                                 </div>
-                            </div>
-                            <div class="clearall flex">
-                                <img src="assets/trash.png" alt="Not Found" class="width">
-                                <span class="trash clearallhistory">Clear all watch history</span>
-                            </div>
-                            <div class="clearhover">
-                                <div class="historyhover flex">
-                                    <img src="assets/playbutton.png" alt="Not Found" class="width">
-                                    <span class="trash">Turn on watch history</span>
+                            </a>
+                            <a href="shorts.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">SHORTS</p>
                                 </div>
-                            </div>
-                            <div class="clearhover">
-                                <div class="historyhover flex">
-                                    <img src="assets/settings.png" alt="Not Found" class="width">
-                                    <span class="trash">Manage all history</span>
+                            </a>
+                            <a href="playlists.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">PLAYLISTS</p>
                                 </div>
-                            </div>
-                            <div class="clearall flex">
-                                <span class="textspan">Watch and search history</span><br>
-                            </div>
-                            <div class="clearall flex">
-                                <span class="textspan">Comments</span><br>
-                            </div>
-                            <div class="clearall flex">
-                                <span class="textspan">Live chat</span>
-                            </div>
+                            </a>
+                            <a href="community.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme chnlselected">COMMUNITY</p>
+                                </div>
+                            </a>
+                            <a href="details.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">CHANNELS</p>
+                                </div>
+                            </a>
+                            <a href="about.cfm" class="decoration">
+                                <div class="chnlhome pointer">
+                                    <p class="chnlhme">ABOUT</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="chnldivvideos">
+                            This channel hasn't posted yet!
                         </div>
                     </div>
                 </div>

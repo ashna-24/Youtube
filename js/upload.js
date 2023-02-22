@@ -18,11 +18,6 @@ function dottext(id){
     }
 }
 
-function viewvideo(id){
-    var viewvideo = document.getElementById('upvideo_'+id);
-    viewvideo.style.display="block";
-}
-
 /* 
 function unclick(){
     var unsubscribe = document.getElementById('unsubscribe');

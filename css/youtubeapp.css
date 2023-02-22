@@ -121,7 +121,7 @@
 }
 
 .videodiv{
-    width: 200px;
+    width: 238px;
 }
 
 .createupload{
@@ -990,6 +990,7 @@ tr.conttr{
 .videoh3{
     padding: 10px 15px;
     font-size: 15px;
+    color: black;
 }
 
 .videoimg{
@@ -1316,6 +1317,128 @@ tr.conttr{
 .comtsetdiv{
     border-bottom: 1px solid rgb(231,231,231);
     padding: 12px;
+}
+
+.subpara{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px; 
+}
+
+.subset1{
+    width: 1075px;
+    border-bottom: 1px solid rgb(204,204,204);
+}
+
+.subset2{
+    margin-top: 20px;
+}
+
+.subdiv{
+    margin: 0px 30px 20px 30px;
+}
+
+.subcribeset{ 
+    margin: 10px 60px 10px 20px;
+    width: 130px;
+}
+
+.subimg{
+    width: 110px;
+    margin-bottom: 10px;
+    border-radius: 55px;
+}
+
+.subdtlsupload{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.videosubimg{
+    margin: 10px;
+}
+
+.subcount{
+    font-size: 12px;
+    padding: 10px 0px 15px 0px;
+    text-align: center;
+}
+
+.subbutton{
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 30px;
+}
+
+.channelbg{
+    height: 215px;
+    overflow: hidden;
+}
+
+.bgimg{
+    width: 1100px;
+}
+
+.channeldtls {
+    margin: 20px;
+}
+
+.chnlimg{
+    width: 80px;
+    border-radius: 40px;
+}
+
+.dtlschannel{
+   margin: 5px 0px 0px 20px; 
+}
+
+.chnldtlsupload{
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.chnl{
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.contchnldtls{
+    border-bottom: 1px solid rgb(204,204,204);
+}
+
+.channelhome{
+    margin-left: 20px;
+}
+
+.chnlhme{
+    padding: 10px 35px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(101,101,101);
+}
+
+.chnlselected{
+    border-bottom: 3px solid rgb(101,101,101);
+}
+
+.chnlh3{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.chnlvideos{
+    margin: 30px 0px 0px 20px;
+}
+
+.chnldivvideos{   
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
 }
 
 /* .displaytext{

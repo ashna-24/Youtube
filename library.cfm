@@ -43,13 +43,6 @@
                     <div class="set">
                         <div class="title">Subscriptions</div>
                         <div class="home flex padding pointer">
-                            <img src="" alt="Not found" class="width">
-                            <span class="text"></span>
-                        </div>
-                    </div>
-                    <div class="set">
-                        <div class="title">Explore</div>
-                        <div class="home flex padding pointer">
                             <img src="assets/musicpage.jpg" alt="Not found" class="width sub">
                             <span class="text">Music</span>
                         </div>

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
         <script src="js/videoupload.js"></script>
+        <script src="js/viewvideo.js"></script>
         <title>YouTube</title> 
     </head>
     <body class="body">
@@ -44,13 +45,6 @@
                         </div>
                         <div class="set">
                             <div class="title">Subscriptions</div>
-                            <div class="home flex padding pointer">
-                                <img src="" alt="Not found" class="width">
-                                <span class="text"></span>
-                            </div>
-                        </div>
-                        <div class="set">
-                            <div class="title">Explore</div>
                             <div class="home flex padding pointer">
                                 <img src="assets/musicpage.jpg" alt="Not found" class="width sub">
                                 <span class="text">Music</span>
@@ -106,24 +100,24 @@
                         <div class="youtubehome flex">
                             <cfloop query="uploadVideo">
                                 <div class="video1">
-                                    <span class="videoset">
-                                        <a href="view.cfm" onclick="viewvideo(#uploadVideo.ID#)">
-                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
+                                    <a href="view.cfm" class="decoration">
+                                        <span class="videoset">
+                                            <video width="260px" controls height="150px" class="upvideo" onclick="viewvideo(#uploadVideo.ID#)"  id="upload_#uploadVideo.ID#">
                                                 <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
                                             </video>
-                                        </a>
-                                    </span>
-                                    <div class="videodtls flex">
-                                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
-                                        <span class="videoimg">
-                                            <cfset local.profileimage = uploadlogin.Profile>
-                                            <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
                                         </span>
-                                        <div class="videodiv">
-                                            <h3 class="videoh3">#uploadVideo.Title#</h3>
-                                            <span class="dtlsupload">#uploadlogin.FullName#</span>
+                                        <div class="videodtls flex">
+                                            <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
+                                            <span class="videoimg">
+                                                <cfset local.profileimage = uploadlogin.Profile>
+                                                <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
+                                            </span>
+                                            <div class="videodiv">
+                                                <h3 class="videoh3">#uploadVideo.Title#</h3>
+                                                <span class="dtlsupload">#uploadlogin.FullName#</span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </cfloop>
                         </div>
