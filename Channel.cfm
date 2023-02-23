@@ -130,7 +130,7 @@
                         </div>
                         <div class="chnlvideos flex">
                             <cfloop query="uploadVideo">
-                                <div class="video1">
+                                <div class="video1 video2">
                                     <span class="videoset">
                                         <a href="adminview.cfm" onclick="viewvideo(#uploadVideo.ID#)">
                                             <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">

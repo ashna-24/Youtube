@@ -8,13 +8,17 @@
         <script src="js/videoupload.js"></script>
         <script src="js/updatesub.js"></script>
         <script src="js/upload.js"></script>
+        <script src="js/adminprofile.js"></script>
+        <script src="js/viewvideo.js"></script>
+        <script src="assets/jQuery.js"></script>
+        <script src="assets/jQuerymin.js"></script>
         <title>YouTube</title> 
     </head>
     <body class="body">
         <cfoutput>
             <cfif structKeyExists(session, 'adminflag')>
                 <cfinclude  template="adminheader.cfm">
-                <div class="mainbody flex">
+                <div class="mainbody flex" id="ytbbody">
                     <div class="sidebar sidescroll">
                         <div class="set">
                             <a href="homepage.cfm" class="link"><div class="home selected flex padding pointer">
@@ -108,8 +112,8 @@
                             <cfloop query="uploadVideo">
                                 <div class="video1">
                                     <span class="videoset">
-                                        <a href="adminview.cfm" onclick="viewvideo(#uploadVideo.ID#)">
-                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
+                                        <a onclick="viewvideo(#uploadVideo.ID#)">
+                                            <video width="260px" controls height="150px" class="upvideo" onclick="viewvideo(#uploadVideo.ID#); adminviewdisplay()" id="upvideo">
                                                 <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
                                             </video>
                                         </a>
@@ -129,6 +133,9 @@
                             </cfloop>
                         </div>
                     </div>
+                </div>
+                <div class="displayview" id="adminview">
+                    <cfinclude template="adminview.cfm">
                 </div>
             </cfif>
         </cfoutput>

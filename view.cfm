@@ -13,6 +13,7 @@
         <script src="js/updatesub.js"></script>
         <script src="js/unsubscribe.js"></script>
         <script src="js/updatecount.js"></script>
+        <script src="js/adminprofile.js"></script>
         <script src="assets/jQuery.js"></script>
         <script src="assets/jQuerymin.js"></script>
         <title>YouTube</title> 
@@ -25,13 +26,13 @@
                     <div class="viewvideo">
                         <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
                         <div class="video1">
-                            <span class="videoset">
-                                <video width="860px" controls muted height="500px" class="upviewvideo" id="upvideo" onclick="openFullscreen()">
-                                    <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
-                                    <track src="video.en.vtt" kind="subtitles" label="English Subtitles" srclang="en">
-                                </video>
-                            </span>
-                            <h3 class="videoviewh3">#uploadVideo.Title#</h3>
+                            <div class="videoset" id="videoset">
+                                <div class="imgwidth edtviwimg" id="viewimg">
+                                    <video width="860px" controls muted height="500px" class="upviewvideo" id="upvideo" onclick="openFullscreen()">
+                                    </video>
+                                </div>
+                            </div>
+                            <h3 class="videoviewh3" id="videoview"> </h3>
                             <div class="videoviewdtls flex">
                                 <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
                                 <span class="videoimg">
@@ -53,7 +54,7 @@
                                 <div class="viewlike flex">
                                     <div class="viewlikeimg pointer">
                                         <div class="flex">
-                                            <img src="assets/like.png" alt="Not found" class="width viewimg" id="liked" onclick="likedvideo(); updatelikecount('#uploadVideo.Title#'); updatelikes()">
+                                            <img src="assets/like.png" alt="Not found" class="width viewimg" id="liked" onclick="likedvideo(); updatelikecount('#uploadVideo.Title#'); updatelikes('#uploadVideo.Title#')">
                                             <input type="text" id="clicklike" class="clickcomt" value="">
                                             <p class="viewlikevdo">Likes</p>
                                             <img src="assets/dislike.png" alt="Not found" class="dislike width" id="disliked" onclick="dislikedvideo(); updatelikecount('#uploadVideo.Title#'); dislikes()">

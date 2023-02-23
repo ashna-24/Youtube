@@ -80,19 +80,19 @@
                     <div class="subset1">
                         <p class="subpara">Entertainment</p>
                         <div class="subdiv">
-                                <div class="subcribeset">
-                                    <a href="Channel.cfm" class="link">
-                                        <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
-                                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
-                                        <div class="videosubimg">
-                                            <cfset local.profileimage = uploadlogin.Profile>
-                                            <img src="assets/file/#local.profileimage#" name="myImage" class="subimg">
-                                        </div>
-                                        <p class="subdtlsupload">#uploadlogin.FullName#</p>
-                                        <p class="subcount">#uploadVideo.Subscribers# subscribers</p>
-                                    </a>
-                                    <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
-                                </div>
+                            <div class="subcribeset">
+                                <a href="Channel.cfm" class="link">
+                                    <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
+                                    <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
+                                    <div class="videosubimg">
+                                        <cfset local.profileimage = uploadlogin.Profile>
+                                        <img src="assets/file/#local.profileimage#" name="myImage" class="subimg">
+                                    </div>
+                                    <p class="subdtlsupload">#uploadlogin.FullName#</p>
+                                    <p class="subcount">#uploadVideo.Subscribers# subscribers</p>
+                                </a>
+                                <input type="button" class="subbutton" name="subscribe" id="subscribe" value="Subscribe" onclick="subscribed()">
+                            </div>
                         </div>
                     </div>
                     <div class="subset1 subset2">

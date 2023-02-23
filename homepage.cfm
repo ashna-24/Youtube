@@ -6,14 +6,18 @@
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
         <script src="js/videoupload.js"></script>
+        <script src="js/adminprofile.js"></script>
         <script src="js/viewvideo.js"></script>
+        <script src="assets/jQuery.js"></script>
+        <script src="assets/jQuerymin.js"></script>
         <title>YouTube</title> 
     </head>
     <body class="body">
         <cfoutput>
             <cfif structKeyExists(session, 'userflag')>
                 <cfinclude  template="header.cfm">
-                <div class="mainbody flex">
+                <div class="mainbody flex" id="mainytbbody">
+                    <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
                     <div class="sidebar sidescroll">
                         <div class="set">
                             <div class="home selected flex padding pointer">
@@ -30,7 +34,7 @@
                                 <img src="assets/videolibrary.png" alt="Not found" class="width">
                                 <span class="text">Library</span>
                             </div></a>
-                            <a href="history.cfm" class="link"><div class="home history flex padding pointer">
+                            <a href="history.cfm" class="link"<!---  onclick="viewvideo(#uploadVideo.ID#); historyview()" --->><div class="home history flex padding pointer">
                                 <img src="assets/history.png" alt="Not found" class="width">
                                 <span class="text">History</span>
                             </div></a>
@@ -79,7 +83,6 @@
                         </div>
                     </div>
                     <div class="content">
-                        <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
                         <div class="list flex">
                             <div class="all black">
                                 <span class="size pointer">All</span>
@@ -100,9 +103,9 @@
                         <div class="youtubehome flex">
                             <cfloop query="uploadVideo">
                                 <div class="video1">
-                                    <a href="view.cfm" class="decoration">
+                                    <!--- <a href="view.cfm" class="decoration"> --->
                                         <span class="videoset">
-                                            <video width="260px" controls height="150px" class="upvideo" onclick="viewvideo(#uploadVideo.ID#)"  id="upload_#uploadVideo.ID#">
+                                            <video width="260px" controls height="150px" class="upvideo" id="upload" onclick="viewvideo(#uploadVideo.ID#); viewdisplay()">
                                                 <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
                                             </video>
                                         </span>
@@ -117,12 +120,18 @@
                                                 <span class="dtlsupload">#uploadlogin.FullName#</span>
                                             </div>
                                         </div>
-                                    </a>
+                                    <!--- </a> --->
                                 </div>
                             </cfloop>
                         </div>
                     </div>
                 </div>
+                <div id="view" class="displayview">
+                    <cfinclude  template="view.cfm">
+                </div>
+                <!--- <div class="displayview" id="historyview">
+                    <cfinclude  template="history.cfm">
+                </div> --->
             </cfif>
         </cfoutput>
     </body>

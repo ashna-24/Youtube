@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css">
         <link rel="icon" href="assets/youtubeicon.png">
+        <script src="js/adminprofile.js"></script>
+        <script src="assets/jQuery.js"></script>
+        <script src="assets/jQuerymin.js"></script>
         <title>YouTube</title> 
     </head>
     <body>
@@ -79,6 +82,10 @@
                     <div class="historycont flex">
                         <div class="historylist">
                             <h6 class="watchhistory">Watch history</h6>
+                            <div class="imgwidth edtviwimg" id="viewhistory">
+                                <video width="260px" controls height="150px" class="upvideo" id="historyvideo" onclick="openFullscreen()">
+                                </video>
+                            </div>
                         </div>
                         <div class="historyselect">
                             <p class="typehistory">History Type</p>

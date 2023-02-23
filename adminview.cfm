@@ -12,6 +12,7 @@
         <script src="js/dislikes.js"></script>
         <script src="js/updatesub.js"></script>
         <script src="js/unsubscribe.js"></script>
+        <script src="js/adminprofile.js"></script>
         <script src="js/updatecount.js"></script>
         <script src="assets/jQuery.js"></script>
         <script src="assets/jQuerymin.js"></script>
@@ -25,12 +26,13 @@
                     <div class="viewvideo">
                         <cfinvoke  method="getinsert" component="components/create" returnVariable="uploadVideo">
                         <div class="video1">
-                            <span class="videoset">
-                                <video width="860px" controls muted height="500px" class="upviewvideo" id="upvideo" onclick="openFullscreen()">
-                                    <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
-                                </video>
-                            </span>
-                            <h3 class="videoviewh3">#uploadVideo.Title#</h3>
+                            <div class="videoset" id="videoset">
+                                <div class="imgwidth edtviwimg" id="viewhistory">
+                                    <video width="860px" controls muted height="500px" class="upviewvideo" id="historyvideo" onclick="openFullscreen()">
+                                    </video>
+                                </div>
+                            </div>
+                            <h3 class="videoviewh3" id="videoview"> </h3>
                             <div class="videoviewdtls flex">
                                 <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
                                 <span class="videoimg">

@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/youtubeapp.css">
         <script src="js/videoupload.js"></script> 
+        <script src="js/adminprofile.js"></script>
+        <script src="js/viewvideo.js"></script>
+        <script src="assets/jQuery.js"></script>
+        <script src="assets/jQuerymin.js"></script>
         <link rel="icon" href="assets/youtubeicon.png">
         <title>YouTube</title>
     </head>
@@ -48,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mainbody flex">
+            <div class="mainbody flex" id="signinyoutube">
                 <div class="sidebar sidescroll">
                     <div class="set">
                         <a href="youtube.cfm" class="link"><div class="home selected flex padding pointer">
@@ -140,30 +144,33 @@
                         </div>
                     </div>
                     <div class="youtubehome flex">
-                            <cfloop query="uploadVideo">
-                                <div class="video1">
-                                    <span class="videoset">
-                                        <a href="view.cfm" onclick="viewvideo(#uploadVideo.ID#)">
-                                            <video width="260px" controls height="150px" class="upvideo" id="upvideo_#uploadVideo.ID#">
-                                                <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
-                                            </video>
-                                        </a>
+                        <cfloop query="uploadVideo">
+                            <div class="video1">
+                                    <!--- <a href="view.cfm" onclick="viewvideo(#uploadVideo.ID#)"> --->
+                                <span class="videoset">
+                                    <video width="260px" controls height="150px" class="upvideo" id="upload" onclick="viewvideo(#uploadVideo.ID#); signinviewdisplay()">
+                                        <source src="assets/uploadedfile/#uploadVideo.FileUpload#" type="video/mp4">
+                                    </video>
+                                </span>
+                                    <!--- </a> --->
+                                <div class="videodtls flex">
+                                    <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
+                                    <span class="videoimg">
+                                        <cfset local.profileimage = uploadlogin.Profile>
+                                        <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
                                     </span>
-                                    <div class="videodtls flex">
-                                        <cfinvoke method="getsignin" component="components/profile" returnVariable="uploadlogin">
-                                        <span class="videoimg">
-                                            <cfset local.profileimage = uploadlogin.Profile>
-                                            <img src="assets/file/#local.profileimage#" name="myImage" class="videoimg">
-                                        </span>
-                                        <div class="videodiv">
-                                            <p class="videouph3">#uploadVideo.Title#</h3>
-                                            <p class="dtlsupupload">#uploadlogin.FullName#</p>
-                                        </div>
+                                    <div class="videodiv">
+                                        <p class="videouph3">#uploadVideo.Title#</h3>
+                                        <p class="dtlsupupload">#uploadlogin.FullName#</p>
                                     </div>
                                 </div>
-                            </cfloop>
-                        </div>
+                            </div>
+                        </cfloop>
+                    </div>
                 </div>
+            </div>
+            <div id="signinview" class="displayview">
+                <cfinclude template="view.cfm">
             </div>
         </cfoutput>
     </body>
