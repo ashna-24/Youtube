@@ -1448,12 +1448,39 @@ tr.conttr{
     font-size: 15px;
 }
 
+.replyimg{
+    width: 20px;
+    padding: 15px 10px 15px 0px;
+}
+
+.disreplylike{
+    width: 20px;
+    padding: 15px 0px 15px 10px;
+}
+
 /* #mainytbbody, #ytbbody, #signinyoutube{
     display: block;
 } */
 
 .displayview{
     display: none;
+}
+
+.clickreply{
+    border: none;
+    padding: 15px 0px 15px 0px;
+    font-weight: bold;
+    width: 18px;
+    color: gray;
+    font-size: 12px;
+}
+
+.reply{
+    margin: 12px 0px 12px 25px;
+    padding: 0px 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 12px;
 }
 
 /* .displaytext{

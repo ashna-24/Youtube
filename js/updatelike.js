@@ -8,9 +8,6 @@ function updatelikes(message){
             contactid: $('#contactId').val(),
             title: $('#clicklike').val(),
             datatype: 'json'
-        },
-        success:function(data){
-            console.log(data);
         }
     })
 }

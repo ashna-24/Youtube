@@ -9,6 +9,8 @@
         <script src="js/updatelike.js"></script>
         <script src="js/updatelikecount.js"></script>
         <script src="js/likedvideo.js"></script>
+        <script src="js/likereplycount.js"></script>
+        <script src="js/updatereply.js"></script>
         <script src="js/dislikes.js"></script>
         <script src="js/updatesub.js"></script>
         <script src="js/unsubscribe.js"></script>
@@ -105,6 +107,15 @@
                                     <div class="commentdtls">
                                         <p class="comtchannel">#userpage.FullName#</p>
                                         <p class="comttxt">#commentlist.Comment#</p>
+                                        <input type="hidden" id="replyId" name="replyId" value="">
+                                        <div class="commentreply">
+                                            <div class="flex">
+                                                <img src="assets/like.png" alt="Not found" class="replyimg" id="likedreply_#commentlist.ID#" onclick="likedreply('#commentlist.ID#'); likereplycount('#commentlist.Comment#'); updatereply('#commentlist.ID#')">
+                                                <input type="text" id="clickreply" class="clickreply" value="">
+                                                <img src="assets/dislike.png" alt="Not found" class="disreplylike" id="dislikedreply_#commentlist.ID#" onclick="dislikedreply('#commentlist.ID#'); likereplycount('#commentlist.ID#'); dislikes()">
+                                                <button name="reply" id="reply" class="reply pointer">Reply</button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="comtthreedot">
                                         <button class="filterdotselect" id="filterdot_#commentlist.ID#" style="visibility:hidden">

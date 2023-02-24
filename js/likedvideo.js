@@ -24,3 +24,30 @@ function dislikedvideo(){
         disliked.src="assets/dislike.png";
     }
 }
+
+function likedreply(id){
+    var likedreply = document.getElementById('likedreply_'+id);
+    var dislikedreply = document.getElementById('dislikedreply_'+id);
+
+    if(likedreply.src="assets/like.png"){
+        likedreply.src="assets/thumbs.png";
+        dislikedreply.src="assets/dislike.png";
+    }
+    else{
+        likedreply.classList.toggle("thump");
+    }
+}
+
+function dislikedreply(id){
+    var dislikedreply = document.getElementById('dislikedreply_'+id);
+    var likedreply = document.getElementById('likedreply_'+id);
+
+    if(dislikedreply.src="assets/dislike.png"){
+        dislikedreply.src="assets/thumbdown.png";
+        likedreply.src="assets/like.png";
+        likedreply.classList.toggle("thumpdown");
+    }
+    else{
+        dislikedreply.src="assets/dislike.png";
+    }
+}
