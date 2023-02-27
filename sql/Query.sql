@@ -36,3 +36,5 @@ ADD Subscribers int default '20';
 ALTER TABLE uploaddata
 ADD Likes int default '20';
 
+ALTER TABLE comment
+ADD Likes int default '5';

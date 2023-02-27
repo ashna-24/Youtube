@@ -8,6 +8,9 @@ function updatereply(message){
             contactid: $('#replyId').val(),
             title: $('#clickreply').val(),
             datatype: 'json'
+        },
+        success:function(data){
+            console.log(data);
         }
     })
 }

@@ -104,9 +104,10 @@
                                     <div class="commentdtls">
                                         <p class="comtchannel">#userpage.FullName#</p>
                                         <p class="comttxt">#commentlist.Comment#</p>
+                                        <input type="hidden" id="replyId" name="replyId" value="">
                                         <div class="commentreply">
                                             <div class="flex">
-                                                <img src="assets/like.png" alt="Not found" class="replyimg" id="likedreply_#commentlist.ID#" onclick="likedreply('#commentlist.ID#'); likereplycount('#commentlist.ID#'); updatereply('#commentlist.ID#')">
+                                                <img src="assets/like.png" alt="Not found" class="replyimg" id="likedreply_#commentlist.ID#" onclick="likedreply('#commentlist.ID#'); likereplycount('#commentlist.Comment#'); updatereply('#commentlist.ID#')">
                                                 <input type="text" id="clickreply" class="clickreply" value="">
                                                 <img src="assets/dislike.png" alt="Not found" class="disreplylike" id="dislikedreply_#commentlist.ID#" onclick="dislikedreply('#commentlist.ID#'); likereplycount('#commentlist.ID#'); dislikes()">
                                                 <button name="reply" id="reply" class="reply pointer">Reply</button>
